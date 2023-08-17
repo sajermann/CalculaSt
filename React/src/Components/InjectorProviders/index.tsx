@@ -1,20 +1,29 @@
-import { ReactNode } from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ReactNode, useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { DarkModeProvider } from '../../Hooks/UseDarkMode';
-import { TestProvider } from '../../Hooks/UseTest';
-import { Header } from '../Header';
+import { useDarkMode } from '~/Hooks/UseDarkMode';
 
 import '../../Config/i18n';
+import { Header } from '../Header';
 
 export function InjectorProviders({ children }: { children: ReactNode }) {
+	const { isDarkMode } = useDarkMode();
+
+	const theme = useMemo(
+		() =>
+			createTheme({
+				palette: {
+					mode: isDarkMode ? 'dark' : 'light',
+				},
+			}),
+		[isDarkMode],
+	);
 	return (
 		<BrowserRouter>
-			<DarkModeProvider>
-				<TestProvider>
-					<Header />
-					{children}
-				</TestProvider>
-			</DarkModeProvider>
+			<ThemeProvider theme={theme}>
+				<Header />
+				<main className="h-full">{children}</main>
+			</ThemeProvider>
 		</BrowserRouter>
 	);
 }

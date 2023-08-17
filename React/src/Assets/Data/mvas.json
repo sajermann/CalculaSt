@@ -1,0 +1,608 @@
+[
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "RS"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 110.13,
+			"percentSimplesNacional": 0,
+			"id": "070da587-5273-4c5d-0d6a-08d9a046cad5",
+			"createdAt": "2021-11-05T07:44:28.579941",
+			"updatedAt": "2021-11-05T07:44:28.579943",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "RJ"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 55.1,
+			"percentSimplesNacional": 0,
+			"id": "0d8bfd66-f0fe-4815-0d61-08d9a046cad5",
+			"createdAt": "2021-11-05T07:38:28.186181",
+			"updatedAt": "2021-11-05T07:38:28.186182",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "DF"
+					},
+					{
+							"id": "", "name": "", "initials": "MT"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 56.13,
+			"percentSimplesNacional": 0,
+			"id": "16d90444-6b85-41dd-0d5e-08d9a046cad5",
+			"createdAt": "2021-11-05T07:26:55.48881",
+			"updatedAt": "2021-11-05T07:30:10.260205",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "PR"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 49.17,
+			"percentSimplesNacional": 14.75,
+			"id": "180ed62f-dadc-494a-0d67-08d9a046cad5",
+			"createdAt": "2021-11-05T07:43:14.755786",
+			"updatedAt": "2021-11-05T07:43:14.755788",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "AP"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 57.65,
+			"percentSimplesNacional": 0,
+			"id": "1fcdc25c-55fe-47b5-0d64-08d9a046cad5",
+			"createdAt": "2021-11-05T07:41:34.696704",
+			"updatedAt": "2021-11-05T07:41:34.696706",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "RS"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 50.4,
+			"percentSimplesNacional": 0,
+			"id": "3fa0f232-9a27-4e84-0d62-08d9a046cad5",
+			"createdAt": "2021-11-05T07:38:57.647999",
+			"updatedAt": "2021-11-05T07:38:57.648001",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "AP"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 54.24,
+			"percentSimplesNacional": 0,
+			"id": "4463ddf5-886e-42e8-babd-08d9a043c06e",
+			"createdAt": "2021-11-05T07:05:03.413405",
+			"updatedAt": "2021-11-05T07:23:26.288127",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "MG"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 55.6,
+			"percentSimplesNacional": 0,
+			"id": "539d0c3e-b2ee-4193-0d66-08d9a046cad5",
+			"createdAt": "2021-11-05T07:42:53.497692",
+			"updatedAt": "2021-11-05T07:42:53.497694",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "DF"
+					},
+					{
+							"id": "", "name": "", "initials": "MT"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 59.57,
+			"percentSimplesNacional": 0,
+			"id": "5e345390-4934-4f67-0d65-08d9a046cad5",
+			"createdAt": "2021-11-05T07:42:21.197679",
+			"updatedAt": "2021-11-05T07:42:21.197681",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "PR"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 45.95,
+			"percentSimplesNacional": 13.79,
+			"id": "670439ba-d5d8-48b0-0d5f-08d9a046cad5",
+			"createdAt": "2021-11-05T07:37:08.545403",
+			"updatedAt": "2021-11-05T07:37:08.545406",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "PE"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 84.01,
+			"percentSimplesNacional": 0,
+			"id": "6f6001cc-1867-44c7-0d68-08d9a046cad5",
+			"createdAt": "2021-11-05T07:43:43.268608",
+			"updatedAt": "2021-11-05T07:43:43.26861",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "SP"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 41,
+			"percentSimplesNacional": 0,
+			"id": "9e64176a-f0e8-4dc7-0d63-08d9a046cad5",
+			"createdAt": "2021-11-05T07:39:23.688044",
+			"updatedAt": "2021-11-05T07:39:23.688045",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "RJ"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 78.5,
+			"percentSimplesNacional": 0,
+			"id": "a7f252a6-3b12-4ba9-0d69-08d9a046cad5",
+			"createdAt": "2021-11-05T07:44:10.323063",
+			"updatedAt": "2021-11-05T07:44:10.323065",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "SP"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "7413.00.00"
+					}
+			],
+			"percent": 97,
+			"percentSimplesNacional": 0,
+			"id": "de76a914-23c5-4725-0d6b-08d9a046cad5",
+			"createdAt": "2021-11-05T07:44:47.355941",
+			"updatedAt": "2021-11-05T07:44:47.355942",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"states": [
+					{
+							"id": "", "name": "", "initials": "PE"
+					}
+			],
+			"ncms": [
+					{
+							"id": "", "description": "", "code": "8535.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.42.00"
+					},
+					{
+							"id": "", "description": "", "code": "7408.19.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.90.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00"
+					},
+					{
+							"id": "", "description": "", "code": "4415.10.00"
+					},
+					{
+							"id": "", "description": "", "code": "8544.49.00.Ex01"
+					},
+					{
+							"id": "", "description": "", "code": "7614.90.10"
+					},
+					{
+							"id": "", "description": "", "code": "4819.20.00"
+					},
+					{
+							"id": "", "description": "", "code": "7312.10.90"
+					},
+					{
+							"id": "", "description": "", "code": "7408.11.00"
+					},
+					{
+							"id": "", "description": "", "code": "7614.10.10"
+					},
+					{
+							"id": "", "description": "", "code": "3204.17.00"
+					},
+					{
+							"id": "", "description": "", "code": "7605.11.10"
+					},
+					{
+							"id": "", "description": "", "code": "8544.70.30"
+					},
+					{
+							"id": "", "description": "", "code": "8544.60.00"
+					}
+			],
+			"percent": 59.91,
+			"percentSimplesNacional": 0,
+			"id": "e5753be7-71fa-4aa4-0d60-08d9a046cad5",
+			"createdAt": "2021-11-05T07:37:59.181489",
+			"updatedAt": "2021-11-05T07:37:59.181491",
+			"isBlocked": false,
+			"isActive": true
+	}
+]

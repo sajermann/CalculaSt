@@ -1,0 +1,155 @@
+[
+	{
+		"code": "8544.49.00",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, constituídos de fibras embainhadas individualmente, mesmo com condutores elétricos ou munidos de peças de conexão - Outros condutores elétricos, para tensão não superior a 1000V: - Outros",
+		"id": "577679d2-5dcc-6f8f-394e-8d2cd1452a1f",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "8544.60.00",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente) - Outros condutores elétricos, para tensão superior a 1000V",
+		"id": "fc80d3f1-7ae5-1a20-62e0-43dd6805a26d",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7413.00.00",
+		"description": "Cobre e suas obras - Cordas, cabos, tranças (entrançados*) e artigos semelhantes, de cobre, não isolados para usos elétricos.",
+		"id": "e50ffe05-34ac-8c52-6047-4fca988c7119",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "8535.90.00",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Aparelhos para interrupção, seccionamento, derivação, ligação ou conexão de circuitos elétricos (por exemplo, interruptores, comutadores, cortacircuitos, páraraios, eliminadores de onda, tomadas de corrente e outros conectores, caixas de junção), para tensão superior a 1000V - Outros",
+		"id": "00adb5c2-935c-2111-a009-24b1cc62a637",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "8544.42.00",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente), mesmo com peças de conexão - Outros condutores elétricos, para tensão não superior a 1000V: - Munidos de peças de conexão",
+		"id": "07fa5bdb-934a-0fe6-5f59-0753e46f2998",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7408.19.00",
+		"description": "Cobre e suas obras - Fios de cobre. - De cobre refinado (afinado): - Outros",
+		"id": "25bf5c41-0091-1102-7b44-4f4868264a7d",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7312.90.00",
+		"description": "Obras de ferro fundido, ferro ou aço - Cordas, cabos, tranças (entrançados*), lingas e artigos semelhantes, de ferro ou aço, não isolados para usos elétricos. - Outros",
+		"id": "4ddb0db3-1df2-70c6-01fb-f5fc9445270a",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "4415.10.00",
+		"description": "Madeira, carvão vegetal e obras de madeira - Caixotes,caixas,engradados,barricaseembalagenssemelhantes,demadeira; carretéis para cabos, de madeira; paletes simples, paletes-caixas e outros estrados para carga, de madeira; taipais de paletes de madeira.",
+		"id": "585cecaf-3cec-9423-1c5b-654820870fde",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "8544.49.00.Ex01",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente) - Outros condutores elétricos, para tensão não superior a 1000V: - Outros",
+		"id": "62a306de-6da3-3590-1c32-8ddea6563cbc",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7614.90.10",
+		"description": "Alumínio e suas obras - Cordas, cabos, tranças e semelhantes, de alumínio, não isolados para usos elétricos - Outros - Cabos",
+		"id": "62e4fbe6-6078-34c2-80a4-648bc84354a8",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "4819.20.00",
+		"description": "Papel e cartão; obras de pasta de celulose, de papel ou de cartão - Caixas, sacos, bolsas, cartuchos e outras embalagens, de papel, cartão, pasta (ouate) de celulose ou de mantas de fibras de celulose; cartonagens para escritórios, lojas e estabelecimentos semelhantes.",
+		"id": "69f45898-53a0-4087-1a9a-c0d69096889c",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7312.10.90",
+		"description": "Obras de ferro fundido, ferro ou aço - Cordas, cabos, tranças, lingas e artefatos semelhantes, de ferro ou aço, não isolados para usos elétricos - Cordas e cabos - Outros",
+		"id": "76e35842-3fef-3c09-a344-8f6c4c8a5d23",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7408.11.00",
+		"description": "Cobre e suas obras - Fios de cobre. - De cobre refinado (afinado): - Com a maior dimensão da seção transversal superior a 6 mm",
+		"id": "89238f65-a170-5515-60e0-b1e285dc5313",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7614.10.10",
+		"description": "Alumínio e suas obras - Cordas, cabos, tranças e semelhantes, de alumínio, não isolados para usos elétricos - Com alma de aço - Cordas e cabos.",
+		"id": "8af1c4c0-5641-0bb7-4fc5-2ca9f88f3f73",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "3204.17.00",
+		"description": "Extratos tanantes e tintoriais; taninos e seus derivados; pigmentos e outras matérias corantes, tintas e vernizes, mástiques",
+		"id": "9e934fc3-8195-57cd-679c-806739293fad",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "7605.11.10",
+		"description": "Alumínio e suas obras - Fios de alumínio. - De alumínio não ligado: - Com a maior dimensão da seção transversal superior a 7 mm - Com um teor de alumínio igual ou superior a 99,45 %, em peso, e uma resistividade elétrica inferior ou igual a 0,0283 ohm.mm2/m",
+		"id": "d425cb04-0460-6eeb-88fb-7cae19960b14",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	},
+	{
+		"code": "8544.70.30",
+		"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente) - Cabos de fibras ópticas - Com revestimento externo de alumínio",
+		"id": "de2dc8fc-3e4c-90d0-9b8d-888f930ca35a",
+		"createdAt": "2021-11-03T20:37:48",
+		"updatedAt": "2021-11-03T20:37:48",
+		"isBlocked": true,
+		"isActive": true
+	}
+]

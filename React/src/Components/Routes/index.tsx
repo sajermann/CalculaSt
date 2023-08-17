@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from '../../Pages/Home';
-import { Test } from '../../Pages/Test';
+import Create from '~/Pages/Create';
+import Home from '~/Pages/Home';
 
 export function RoutesConfig() {
 	return (
 		<Routes>
 			<Route path="/" element={<Home />} />
-			<Route path="/test" element={<Test />} />
+			<Route path="/create-simulation" element={<Create />} />
 		</Routes>
 	);
 }
