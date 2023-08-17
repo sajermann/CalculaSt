@@ -5,7 +5,7 @@ type Props = {
 	porcentagem: boolean;
 };
 
-export function customFormatReal({
+export function customFormat({
 	valor,
 	casas = 2,
 	cifrao = false,

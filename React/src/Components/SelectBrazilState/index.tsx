@@ -1,11 +1,12 @@
 import { Autocomplete, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { TAutocompleteDefault } from '~/Model/TAutocompleteDefault';
 import { TBrazilState } from '~/Model/TBrazilState';
 
 type Props = {
-	handleBrazilState: (data: TBrazilState) => void;
+	handleBrazilState: (data: TBrazilState | null) => void;
 	states: TBrazilState[];
-	value: TBrazilState;
+	value: TBrazilState | null;
 	disabled: boolean;
 	label: string;
 };
@@ -17,24 +18,17 @@ export function SelectBrazilState({
 	disabled,
 	label,
 }: Props) {
-	const [valueHere, setValueHere] = useState<TBrazilState | null>(null);
-	const [defaultProps, setDefaultProps] = useState<any>({
+	const [defaultProps, setDefaultProps] = useState<
+		TAutocompleteDefault<TBrazilState>
+	>({
 		options: states,
 		getOptionLabel: (option: TBrazilState) =>
 			`${option.initials} - ${option.name}`,
 	});
 
-	function handleAutoComplete(newValue: TBrazilState) {
-		handleBrazilState({ ...newValue });
+	function handleAutoComplete(newValue: TBrazilState | null) {
+		handleBrazilState(newValue);
 	}
-
-	useEffect(() => {
-		if (value.initials === '') {
-			setValueHere(null);
-			return;
-		}
-		setValueHere({ ...value });
-	}, [value]);
 
 	useEffect(() => {
 		setDefaultProps({
@@ -46,11 +40,14 @@ export function SelectBrazilState({
 
 	return (
 		<Autocomplete
+			isOptionEqualToValue={(option, valueTemp) =>
+				option.name === valueTemp.name
+			}
 			fullWidth
 			disabled={disabled}
 			{...defaultProps}
-			value={valueHere}
-			onChange={(_, newValue: TBrazilState) => {
+			value={value}
+			onChange={(_, newValue) => {
 				handleAutoComplete(newValue);
 			}}
 			renderInput={params => (

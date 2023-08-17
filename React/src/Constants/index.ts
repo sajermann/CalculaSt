@@ -52,8 +52,8 @@ const ITEM: TItem = {
 };
 
 const CALCULA_ST: TCalculaSt = {
-	estadoOrigem: BRAZIL_STATE,
-	estadoDestino: BRAZIL_STATE,
+	estadoOrigem: null,
+	estadoDestino: null,
 	destinoMercadoria: ID_NAME,
 	tipoCalculo: ID_NAME,
 	clienteContribuinte: false,

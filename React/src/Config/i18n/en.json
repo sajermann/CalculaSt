@@ -1,5 +1,7 @@
 {
 	"translations": {
-		"LANGUAGE": "Language"
+		"LANGUAGE": "Language",
+		"FROM": "From",
+		"TO": "To"
 	}
 }

@@ -1,7 +1,7 @@
 import { TCalculaSt } from '~/Model/TCalculaSt';
 import { TObs } from '~/Model/TObs';
 
-import { customFormatReal } from '../CustomFormatReal';
+import { customFormat } from '../CustomFormat';
 
 type Props = {
 	calculaSt: TCalculaSt;
@@ -14,7 +14,7 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 		difalTemp = calculaSt.itens[i].difal + difalTemp;
 	}
 
-	const difalTempFormat = customFormatReal({
+	const difalTempFormat = customFormat({
 		valor: difalTemp,
 		casas: 2,
 		cifrao: true,
@@ -26,7 +26,7 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 		fecpTemp = calculaSt.itens[j].fecp + fecpTemp;
 	}
 
-	const fecpTempFormat = customFormatReal({
+	const fecpTempFormat = customFormat({
 		valor: fecpTemp,
 		casas: 2,
 		cifrao: true,
@@ -35,9 +35,9 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 
 	const obsLocalizada = obsDataBase.filter(
 		obsHere =>
-			obsHere.estado === calculaSt.estadoDestino.initials &&
-			obsHere.destino === calculaSt.destinoMercadoria.name &&
-			obsHere.tipo === calculaSt.tipoCalculo.name &&
+			obsHere.estado === calculaSt.estadoDestino?.initials &&
+			obsHere.destino === calculaSt.destinoMercadoria?.name &&
+			obsHere.tipo === calculaSt.tipoCalculo?.name &&
 			obsHere.simplesNacional === calculaSt.simplesNacional &&
 			obsHere.contribuinte === calculaSt.clienteContribuinte,
 	);
@@ -50,7 +50,7 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 			obsMontada = `${obsMontada} Observação: ${obsLocalizada[0].obs}`;
 		}
 		if (
-			calculaSt.estadoDestino.initials === 'RJ' &&
+			calculaSt.estadoDestino?.initials === 'RJ' &&
 			(!Number.isNaN(fecpTempFormat) || parseFloat(fecpTempFormat) !== 0.0)
 		) {
 			obsMontada = `${obsMontada} ${fecpTempFormat}`;

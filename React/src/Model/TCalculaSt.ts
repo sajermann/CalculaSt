@@ -4,10 +4,10 @@ import { TItem } from './TItem';
 import { TTypeCalc } from './TipoCalculo';
 
 export type TCalculaSt = {
-	estadoOrigem: TBrazilState;
-	estadoDestino: TBrazilState;
-	destinoMercadoria: TDestinationProduct;
-	tipoCalculo: TTypeCalc;
+	estadoOrigem: TBrazilState | null;
+	estadoDestino: TBrazilState | null;
+	destinoMercadoria: TDestinationProduct | null;
+	tipoCalculo: TTypeCalc | null;
 	clienteContribuinte: boolean;
 	simplesNacional: boolean;
 	baseDeCalculo: number;
