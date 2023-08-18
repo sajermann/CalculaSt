@@ -4,6 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import SaveIcon from '@mui/icons-material/Save';
 import {
 	AppBar,
+	Box,
 	CircularProgress,
 	Dialog,
 	Fab,
@@ -11,17 +12,16 @@ import {
 	FormControl,
 	Grid,
 	IconButton,
-	Input,
 	InputAdornment,
-	InputLabel,
 	Slide,
 	TextField,
 	Toolbar,
 	Typography,
 } from '@mui/material';
+import { green } from '@mui/material/colors';
 import { TransitionProps } from '@mui/material/transitions';
 import clsx from 'clsx';
-import { ReactElement, Ref, forwardRef, useState } from 'react';
+import { ChangeEvent, forwardRef, useState } from 'react';
 import { CONST } from '~/Constants';
 import { TCalculaSt } from '~/Model/TCalculaSt';
 import { TFecp } from '~/Model/TFecp';
@@ -32,12 +32,15 @@ import { TMva } from '~/Model/TMva';
 import { TNcm } from '~/Model/TNcm';
 import { customFormat } from '~/Utils/CustomFormat';
 import { reCalcItem } from '~/Utils/ReCalcItem';
+import { SelectionProducts } from '../SelectionProducts';
 
 const Transition = forwardRef(
-	// eslint-disable-next-line react/require-default-props
-	(props: TransitionProps & { children?: ReactElement }, ref: Ref<unknown>) => (
-		<Slide direction="up" ref={ref} {...props} />
-	),
+	(
+		props: TransitionProps & {
+			children: JSX.Element;
+		},
+		ref: React.Ref<unknown>,
+	) => <Slide direction="up" ref={ref} {...props} />,
 );
 
 type Props = {
@@ -116,7 +119,7 @@ export function AddItens({
 		itemEditing.ncm = { ...data };
 		setItemForAdd(itemEditing);
 	}
-	function handleInput(e: any) {
+	function handleInput(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
 		const { value } = e.target;
 		const { name } = e.target;
 		const itemEditing = { ...itemForAdd };
@@ -137,6 +140,15 @@ export function AddItens({
 		setItemForAdd(itemEditing);
 		calcItem(itemEditing);
 	}
+
+	const buttonSx = {
+		...(success && {
+			bgcolor: green[500],
+			'&:hover': {
+				bgcolor: green[700],
+			},
+		}),
+	};
 
 	return (
 		<div
@@ -166,336 +178,342 @@ export function AddItens({
 				onClose={handleClose}
 				TransitionComponent={Transition}
 			>
-				<AppBar>
-					<Toolbar>
+				<AppBar position="sticky">
+					<Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
 						<IconButton
 							disabled={isLoading}
 							edge="start"
 							color="inherit"
 							onClick={handleClose}
 							aria-label="close"
+							size="large"
 						>
 							<CloseIcon />
 						</IconButton>
 						<Typography variant="h6">Incluir Item</Typography>
 
-						<div>
+						<Box sx={{ m: 1, position: 'relative' }}>
 							<Fab
+								size="medium"
 								aria-label="save"
 								color="primary"
-								disabled={!(itemForAdd.total > 0.01)}
+								disabled={!(itemForAdd.total > 0.01) || isLoading}
 								className={buttonClassname}
 								onClick={addAndConfirm}
-								classes={{
-									root: 'classes.buttonSave',
-								}}
+								sx={buttonSx}
 							>
 								{success ? <CheckIcon /> : <SaveIcon />}
 							</Fab>
 							{isLoading && (
-								<CircularProgress size={68} className="classes.fabProgress" />
+								<CircularProgress
+									size={61}
+									sx={{
+										color: green[500],
+										position: 'absolute',
+										top: -6,
+										left: -6,
+										zIndex: 1,
+									}}
+								/>
 							)}
-						</div>
+						</Box>
 					</Toolbar>
 				</AppBar>
 				<Fade in={open}>
-					<div>
-						<Grid container spacing={1}>
-							<Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
-								<FormControl fullWidth>
-									<InputLabel htmlFor="codigofamilia">N.C.M</InputLabel>
-									<Input
-										fullWidth
-										value={itemForAdd.ncm.code}
-										id="codigofamilia"
-										type="text"
-										inputProps={{
-											autoComplete: 'off',
-											autoFocus: true,
-										}}
-										endAdornment={
-											<>D</>
-											// <SelectionProducts
-											// 	handleSelectNcm={handleSelectNcm}
-											// 	dataBaseNcms={dataBaseNcms}
-											// />
-										}
-									/>
-								</FormControl>
-							</Grid>
-							<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+					<Grid container spacing={3} sx={{ padding: 2 }}>
+						<Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
+							<FormControl fullWidth>
 								<TextField
 									fullWidth
-									id="TextFieldDescricao"
-									label="Descrição do Ncm"
-									defaultValue=""
-									name="description"
-									onChange={handleInput}
-									inputProps={{
-										value: itemForAdd.ncm.description,
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									id="TextFieldQuantidade"
-									label="Quantidade"
-									defaultValue=""
-									name="quantity"
-									onChange={handleInput}
-									type="number"
+									value={itemForAdd.ncm.code}
+									id="codigofamilia"
+									type="text"
+									label="N.C.M"
 									InputProps={{
 										autoComplete: 'off',
+										autoFocus: true,
 										endAdornment: (
-											<InputAdornment position="end">MT / KG</InputAdornment>
+											<SelectionProducts
+												handleSelectNcm={handleSelectNcm}
+												ncmDataBase={ncmDataBase}
+											/>
 										),
 									}}
 								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									id="TextFieldPreco"
-									label="Preço"
-									defaultValue=""
-									name="price"
-									onChange={handleInput}
-									type="number"
-									InputProps={{
-										autoComplete: 'off',
-										endAdornment: (
-											<InputAdornment position="end">R$</InputAdornment>
-										),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Total sem Impostos"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.total,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Ipi"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.ipi,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Base de Cálculo"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.baseCalculo,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Icms"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.icms,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Base Icms ST"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.baseIcmsSt,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Substituição Tributária"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.st,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Pis"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.pis,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Cofins"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.cofins,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Fecp"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.fecp,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Total com Impostos"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.valorTotal,
-											casas: 2,
-											cifrao: true,
-											porcentagem: false,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Porcentagem Icms"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.icmsPorcentagem,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Alíquota Interestadual"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.intraPorcentagem,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Margem de Valor Agregado"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.mvaPorcentagem,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
-							<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
-								<TextField
-									fullWidth
-									label="Acréscimo"
-									defaultValue=""
-									inputProps={{
-										disabled: true,
-										value: customFormat({
-											valor: itemForAdd.acresc,
-											casas: 2,
-											cifrao: false,
-											porcentagem: true,
-										}),
-									}}
-								/>
-							</Grid>
+							</FormControl>
 						</Grid>
-					</div>
+						<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+							<TextField
+								fullWidth
+								id="TextFieldDescricao"
+								label="Descrição do Ncm"
+								defaultValue=""
+								name="description"
+								onChange={handleInput}
+								inputProps={{
+									value: itemForAdd.ncm.description,
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								id="TextFieldQuantidade"
+								label="Quantidade"
+								defaultValue=""
+								name="quantity"
+								onChange={handleInput}
+								type="number"
+								InputProps={{
+									autoComplete: 'off',
+									endAdornment: (
+										<InputAdornment position="end">MT / KG</InputAdornment>
+									),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								id="TextFieldPreco"
+								label="Preço"
+								defaultValue=""
+								name="price"
+								onChange={handleInput}
+								type="number"
+								InputProps={{
+									autoComplete: 'off',
+									endAdornment: (
+										<InputAdornment position="end">R$</InputAdornment>
+									),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Total sem Impostos"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.total,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Ipi"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.ipi,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Base de Cálculo"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.baseCalculo,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Icms"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.icms,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Base Icms ST"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.baseIcmsSt,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Substituição Tributária"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.st,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Pis"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.pis,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Cofins"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.cofins,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Fecp"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.fecp,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Total com Impostos"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.valorTotal,
+										casas: 2,
+										cifrao: true,
+										porcentagem: false,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Porcentagem Icms"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.icmsPorcentagem,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Alíquota Interestadual"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.intraPorcentagem,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Margem de Valor Agregado"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.mvaPorcentagem,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
+							<TextField
+								fullWidth
+								label="Acréscimo"
+								defaultValue=""
+								inputProps={{
+									disabled: true,
+									value: customFormat({
+										valor: itemForAdd.acresc,
+										casas: 2,
+										cifrao: false,
+										porcentagem: true,
+									}),
+								}}
+							/>
+						</Grid>
+					</Grid>
 				</Fade>
 			</Dialog>
 		</div>
