@@ -35,17 +35,23 @@ type Props = {
 	handleSelectNcm: (data: TNcm) => void;
 };
 export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
+	const [isFirstUseEffect, setIsFirstUseEffect] = useState(true);
 	const [products] = useState<TNcm[]>(ncmDataBase);
 	const [open, setOpen] = useState(false);
 	const [rowSelection, setRowSelection] = useState<MRT_RowSelectionState>({});
 
 	useEffect(() => {
+		if (isFirstUseEffect) {
+			setIsFirstUseEffect(false);
+			return;
+		}
 		const indexItem = Object.getOwnPropertyNames(rowSelection)[0];
 		handleSelectNcm(
 			!indexItem
 				? { code: '', description: '', id: '' }
 				: products[Number(indexItem)],
 		);
+		setOpen(false);
 	}, [rowSelection]);
 
 	const columns = useMemo<MRT_ColumnDef<TNcm>[]>(
@@ -78,7 +84,7 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 				TransitionComponent={Transition}
 			>
 				<AppBar position="sticky">
-					<Toolbar>
+					<Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
 						<IconButton
 							edge="start"
 							color="inherit"
@@ -87,7 +93,9 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 						>
 							<CloseIcon />
 						</IconButton>
-						<Typography variant="h6">Selecionar Produtos</Typography>
+						<Typography variant="h6" className="flex-1 text-center">
+							Selecionar Produtos
+						</Typography>
 					</Toolbar>
 				</AppBar>
 				<Fade in={open}>
