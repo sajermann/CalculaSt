@@ -5,6 +5,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import {
 	AppBar,
 	Box,
+	Button,
 	CircularProgress,
 	Dialog,
 	Fab,
@@ -20,7 +21,6 @@ import {
 } from '@mui/material';
 import { green } from '@mui/material/colors';
 import { TransitionProps } from '@mui/material/transitions';
-import clsx from 'clsx';
 import { ChangeEvent, forwardRef, useState } from 'react';
 import { CONST } from '~/Constants';
 import { TCalculaSt } from '~/Model/TCalculaSt';
@@ -51,7 +51,6 @@ type Props = {
 	ncmDataBase: TNcm[];
 	fecpDataBase: TFecp[];
 	handleAddItem: (data: TItem) => void;
-	position: 'right' | 'center';
 };
 
 export function AddItens({
@@ -62,7 +61,6 @@ export function AddItens({
 	ncmDataBase,
 	fecpDataBase,
 	handleAddItem,
-	position,
 }: Props) {
 	const [open, setOpen] = useState(false);
 	const [itemForAdd, setItemForAdd] = useState<TItem>(CONST.DEFAULT.ITEM);
@@ -86,7 +84,7 @@ export function AddItens({
 					handleResetInfos();
 					setOpen(false);
 				}, 500);
-			}, 2000);
+			}, 1000);
 		}
 	}
 
@@ -97,10 +95,6 @@ export function AddItens({
 	const handleClose = () => {
 		setOpen(false);
 	};
-
-	const buttonClassname = clsx({
-		'[classes.buttonSuccess]': success,
-	});
 
 	function calcItem(item: TItem) {
 		const itemEditing = reCalcItem({
@@ -151,14 +145,9 @@ export function AddItens({
 	};
 
 	return (
-		<div
-			className={
-				position === 'center'
-					? 'classes.buttonAddInCenter'
-					: 'classes.buttonAddInRight'
-			}
-		>
-			<Fab
+		<div>
+			<Button
+				variant="contained"
 				color="primary"
 				aria-label="add"
 				disabled={
@@ -169,8 +158,8 @@ export function AddItens({
 				}
 				onClick={handleOpen}
 			>
-				<AddIcon />
-			</Fab>
+				<AddIcon /> Adicionar Item
+			</Button>
 
 			<Dialog
 				fullScreen
@@ -198,7 +187,6 @@ export function AddItens({
 								aria-label="save"
 								color="primary"
 								disabled={!(itemForAdd.total > 0.01) || isLoading}
-								className={buttonClassname}
 								onClick={addAndConfirm}
 								sx={buttonSx}
 							>
@@ -224,6 +212,7 @@ export function AddItens({
 						<Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
 							<FormControl fullWidth>
 								<TextField
+									variant="standard"
 									fullWidth
 									value={itemForAdd.ncm.code}
 									id="codigofamilia"
@@ -245,9 +234,9 @@ export function AddItens({
 						<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
 							<TextField
 								fullWidth
+								variant="standard"
 								id="TextFieldDescricao"
 								label="Descrição do Ncm"
-								defaultValue=""
 								name="description"
 								onChange={handleInput}
 								inputProps={{
@@ -258,9 +247,9 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								id="TextFieldQuantidade"
 								label="Quantidade"
-								defaultValue=""
 								name="quantity"
 								onChange={handleInput}
 								type="number"
@@ -275,9 +264,9 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={2} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								id="TextFieldPreco"
 								label="Preço"
-								defaultValue=""
 								name="price"
 								onChange={handleInput}
 								type="number"
@@ -292,8 +281,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Total sem Impostos"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -308,8 +297,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Ipi"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -324,8 +313,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Base de Cálculo"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -340,8 +329,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Icms"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -356,8 +345,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Base Icms ST"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -372,8 +361,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Substituição Tributária"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -388,8 +377,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Pis"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -404,8 +393,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Cofins"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -420,8 +409,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Fecp"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -436,8 +425,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Total com Impostos"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -452,8 +441,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Porcentagem Icms"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -468,8 +457,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Alíquota Interestadual"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -484,8 +473,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Margem de Valor Agregado"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({
@@ -500,8 +489,8 @@ export function AddItens({
 						<Grid item xs={12} sm={4} md={3} lg={2} xl={2}>
 							<TextField
 								fullWidth
+								variant="standard"
 								label="Acréscimo"
-								defaultValue=""
 								inputProps={{
 									disabled: true,
 									value: customFormat({

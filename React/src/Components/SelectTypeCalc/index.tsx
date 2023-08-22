@@ -48,7 +48,12 @@ export function SelectTypeCalc({ handleTypeCalc, value, disabled }: Props) {
 			}}
 			disabled={disabled}
 			renderInput={params => (
-				<TextField {...params} label="Tipo Cálculo" margin="normal" />
+				<TextField
+					{...params}
+					label="Tipo Cálculo"
+					margin="normal"
+					variant="standard"
+				/>
 			)}
 		/>
 	);

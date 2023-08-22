@@ -54,7 +54,7 @@ export function MoreOptions() {
 		setOpen(false);
 	};
 	return (
-		<div>
+		<div className="fixed bottom-4 right-1">
 			<SpeedDial
 				ariaLabel="SpeedDial openIcon example"
 				icon={

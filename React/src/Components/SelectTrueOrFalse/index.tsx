@@ -66,7 +66,12 @@ export function SelectTrueOrFalse({
 				handleAutoComplete(newValue);
 			}}
 			renderInput={params => (
-				<TextField {...params} label={label} margin="normal" />
+				<TextField
+					{...params}
+					label={label}
+					margin="normal"
+					variant="standard"
+				/>
 			)}
 		/>
 	);

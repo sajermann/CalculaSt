@@ -25,6 +25,13 @@
 			"prettier"
 	],
 	"rules": {
+		"react/no-unstable-nested-components": [
+			"off",
+			{
+				"allowAsProps": true,
+				"customValidators": [] /* optional array of validators used for propTypes validation */
+			}
+		],
 		"import/prefer-default-export": "off",
 		"import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx","**/*.spec.tsx"]}],
 		"no-restricted-syntax": [

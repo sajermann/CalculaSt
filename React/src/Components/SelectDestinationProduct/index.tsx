@@ -46,7 +46,7 @@ export function SelectDestinationProduct({
 					{...params}
 					label="Destino Mercadoria"
 					margin="normal"
-					fullWidth
+					variant="standard"
 				/>
 			)}
 		/>

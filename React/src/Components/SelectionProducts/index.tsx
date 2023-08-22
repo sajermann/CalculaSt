@@ -13,9 +13,10 @@ import {
 	Typography,
 } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
-import MaterialReactTable, {
+import {
 	MRT_ColumnDef,
 	MRT_RowSelectionState,
+	MaterialReactTable,
 } from 'material-react-table';
 import { forwardRef, useEffect, useMemo, useState } from 'react';
 import { TNcm } from '~/Model/TNcm';
@@ -102,6 +103,9 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 							})}
 							onRowSelectionChange={setRowSelection}
 							state={{ rowSelection }}
+							initialState={{
+								density: 'compact',
+							}}
 						/>
 					</div>
 				</Fade>
