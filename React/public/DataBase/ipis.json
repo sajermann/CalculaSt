@@ -1,0 +1,67 @@
+[
+	{
+		"ncm": {
+			"id": "",
+			"code": "8544.60.00",
+			"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente) - Outros condutores elétricos, para tensão superior a 1000V"
+		},
+		"percent": 5,
+		"id": "2a6d3c96-3c3e-4ae5-4022-08d99febec49",
+		"createdAt": "2021-11-04T20:36:26.854437",
+		"updatedAt": "2021-11-04T20:36:26.85444",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"ncm": {
+			"id": "",
+			"code": "8544.49.00.Ex01",
+			"description": "Máquinas, aparelhos e materiais elétricos, e suas partes; aparelhos de gravação ou de reprodução de som, aparelhos de gravação ou de reprodução de imagens e de som em televisão, e suas partes e acessórios - Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados para usos elétricos (incluídos os envernizados ou oxidados anodicamente) - Outros condutores elétricos, para tensão não superior a 1000V: - Outros"
+		},
+		"percent": 5,
+		"id": "4279adb2-5f45-43bd-4023-08d99febec49",
+		"createdAt": "2021-11-04T20:36:36.611542",
+		"updatedAt": "2021-11-04T20:36:36.611545",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"ncm": {
+			"id": "",
+			"code": "7614.10.10",
+			"description": "Alumínio e suas obras - Cordas, cabos, tranças e semelhantes, de alumínio, não isolados para usos elétricos - Com alma de aço - Cordas e cabos."
+		},
+		"percent": 10,
+		"id": "578d5a27-5d56-48ca-be3d-08d99fe8d17b",
+		"createdAt": "2021-11-04T20:14:13.34331",
+		"updatedAt": "2021-11-04T20:31:04.580061",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"ncm": {
+			"id": "",
+			"code": "7605.11.10",
+			"description": "Alumínio e suas obras - Fios de alumínio. - De alumínio não ligado: - Com a maior dimensão da seção transversal superior a 7 mm - Com um teor de alumínio igual ou superior a 99,45 %, em peso, e uma resistividade elétrica inferior ou igual a 0,0283 ohm.mm2/m"
+		},
+		"percent": 5,
+		"id": "63a1f959-769d-4b8c-3643-08d99fe74108",
+		"createdAt": "2021-11-04T20:03:01.691983",
+		"updatedAt": "2021-11-04T20:03:01.691987",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"ncm": {
+			"id": "",
+			"code": "7614.90.10",
+			"description": "Alumínio e suas obras - Cordas, cabos, tranças e semelhantes, de alumínio, não isolados para usos elétricos - Outros - Cabos"
+		},
+		"percent": 10,
+		"id": "dc5bd679-35f7-42b2-ed2c-08d99fe7b781",
+		"createdAt": "2021-11-04T20:05:51.798352",
+		"updatedAt": "2021-11-04T20:32:18.942736",
+		"isBlocked": false,
+		"isActive": true
+	}
+]

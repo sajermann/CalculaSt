@@ -1,5 +1,6 @@
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactNode, useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { useDarkMode } from '~/Hooks/UseDarkMode';
@@ -23,8 +24,21 @@ export function InjectorProviders({ children }: { children: ReactNode }) {
 		<BrowserRouter>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
-				<Header />
-				<main className="h-full">{children}</main>
+				<QueryClientProvider
+					client={
+						new QueryClient({
+							defaultOptions: {
+								queries: {
+									refetchOnWindowFocus: false,
+									retry: false,
+								},
+							},
+						})
+					}
+				>
+					<Header />
+					<main className="h-full">{children}</main>
+				</QueryClientProvider>
 			</ThemeProvider>
 		</BrowserRouter>
 	);

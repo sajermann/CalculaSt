@@ -1,0 +1,326 @@
+[
+	{
+			"state": {
+					"id":"", "name": "", "initials": "DF"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "05c62ae3-7413-5384-384c-81a5ab923b8b",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "AM"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "0c789bbc-1e87-5a94-20b9-ceea1336a4ad",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "SC"
+			},
+			"percent": 12,
+			"percentIntra": 17,
+			"id": "20c7f762-3106-00c5-2b75-5059cda6066a",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "RS"
+			},
+			"percent": 12,
+			"percentIntra": 17.5,
+			"id": "20d66ad7-7c93-5114-184a-a6159fa84415",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "AL"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "263252d3-6b89-917d-40be-6e83191641b2",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "PR"
+			},
+			"percent": 12,
+			"percentIntra": 18,
+			"id": "27541219-a092-288f-172b-366c996594a5",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "MS"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "2f741d02-a15b-a4f5-56d0-62986d4294d9",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "PB"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "350cb106-3d39-32d9-1c6d-fde387cc7933",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "PI"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "413a151a-2ca1-2acf-47ff-25539fe64c70",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "AP"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "44aa54e8-2430-9737-197a-c3e4765c8fef",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "PE"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "54002f8c-2a57-05b5-76ec-b3fc25a17b65",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "SE"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "589ebdaa-5872-3147-95ea-547e7c484075",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "RR"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "64d688cc-7ed2-9dcb-3482-f6605ee53267",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "RJ"
+			},
+			"percent": 12,
+			"percentIntra": 18,
+			"id": "68474e03-0260-51a5-49ac-f342eca67026",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "PA"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "6e388cf2-a570-16c7-3b75-6066dd3c3967",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "RN"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "72ebeb2a-6162-8bb9-3ca7-88d5da4284c9",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "CE"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "757f8bcf-59bb-8207-680c-281ab24602ff",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "AC"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "7d42c541-403d-8da2-0777-1ff6c7645c13",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "SP"
+			},
+			"percent": 18,
+			"percentIntra": 18,
+			"id": "7e785374-6914-4b86-72ba-da70e5264a9c",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "MT"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "87f262b9-377b-3d50-4f7d-c1d497154638",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "MG"
+			},
+			"percent": 12,
+			"percentIntra": 18,
+			"id": "a5cb3670-1380-9dd4-02ce-50efa4fb2049",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "GO"
+			},
+			"percent": 7,
+			"percentIntra": 17,
+			"id": "b852243b-339a-77ab-0812-dab1ed053277",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "MA"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "dda9ae81-3657-1493-7a34-6a1b0b7218ec",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "ES"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "e839efa3-3e71-4463-3a67-8a5fa0e34af5",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "RO"
+			},
+			"percent": 7,
+			"percentIntra": 17.5,
+			"id": "f09c6aee-43b2-5887-71d4-eebba6338f6d",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "TO"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "f2dbe9a0-0828-12bf-1ea7-13bddc868250",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id":"", "name": "", "initials": "BA"
+			},
+			"percent": 7,
+			"percentIntra": 18,
+			"id": "f372b18c-63c6-60dd-1575-24f458096894",
+			"createdAt": "2021-11-04T20:48:41",
+			"updatedAt": "2021-11-04T20:48:41",
+			"isBlocked": false,
+			"isActive": true
+	}
+]

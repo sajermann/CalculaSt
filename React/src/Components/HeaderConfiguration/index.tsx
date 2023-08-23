@@ -4,7 +4,7 @@ import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { SelectDestinationProduct } from '~/Components/SelectDestinationProduct';
 import { SelectTrueOrFalse } from '~/Components/SelectTrueOrFalse';
 import { SelectTypeCalc } from '~/Components/SelectTypeCalc';
-import { useDataBase } from '~/Hooks/UseDataBase';
+import { useBrazilStatesDataBase } from '~/Hooks/UseBrazilStatesDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TBrazilState } from '~/Model/TBrazilState';
 import { TCalculaSt } from '~/Model/TCalculaSt';
@@ -36,7 +36,8 @@ export function HeaderConfiguration({
 	fecpDataBase,
 	obsDataBase,
 }: Props) {
-	const { BRAZIL_STATES_DB } = useDataBase();
+	// const { BRAZIL_STATES_DB } = useDataBase();
+	const { BRAZIL_STATES_DB } = useBrazilStatesDataBase();
 	const { translate } = useTranslation();
 	function mustDisabled(dataForVerify: string): boolean {
 		if (dataForVerify === 'DestinoMercadoria') {
@@ -181,7 +182,7 @@ export function HeaderConfiguration({
 		<Grid container spacing={1}>
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectBrazilState
-					states={[...BRAZIL_STATES_DB]}
+					states={BRAZIL_STATES_DB || []}
 					label={translate('FROM')}
 					handleBrazilState={handleBrazilStateOrigin}
 					value={calculaSt.estadoOrigem}
@@ -191,7 +192,7 @@ export function HeaderConfiguration({
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectBrazilState
-					states={[...BRAZIL_STATES_DB]}
+					states={BRAZIL_STATES_DB || []}
 					value={calculaSt.estadoDestino}
 					label={translate('TO')}
 					handleBrazilState={handleBrazilStateDestiny}

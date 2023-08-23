@@ -1,0 +1,24 @@
+[
+	{
+			"state": {
+					"id": "", "name": "", "initials": "RJ"
+			},
+			"percent": 2,
+			"id": "52500fd5-571b-4990-478c-08d99ff85e05",
+			"createdAt": "2021-11-04T22:09:02.52311",
+			"updatedAt": "2021-11-04T22:09:02.523112",
+			"isBlocked": false,
+			"isActive": true
+	},
+	{
+			"state": {
+					"id": "", "name": "", "initials": "AL"
+			},
+			"percent": 1,
+			"id": "f587c4ff-0d6b-422f-478b-08d99ff85e05",
+			"createdAt": "2021-11-04T22:07:58.624848",
+			"updatedAt": "2021-11-04T22:07:58.624849",
+			"isBlocked": false,
+			"isActive": true
+	}
+]

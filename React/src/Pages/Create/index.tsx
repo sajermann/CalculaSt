@@ -4,18 +4,19 @@ import { HeaderConfiguration } from '~/Components/HeaderConfiguration';
 import { HeaderInformation } from '~/Components/HeaderInformation';
 import { MainItems } from '~/Components/MainItems';
 import { CONST } from '~/Constants';
-import { useDataBase } from '~/Hooks/UseDataBase';
+import { useObsDataBase } from '~/Hooks/UseObsDataBase';
+
 import { TCalculaSt } from '~/Model/TCalculaSt';
 import { TItem } from '~/Model/TItem';
-import Guid from '~/Utils/GenerateGuid';
+import { handleCreateItem } from '~/Utils/HandleCreateItem';
 import { obsCalc } from '~/Utils/ObsCalc';
 import { reCalcHeader } from '~/Utils/ReCalcHeader';
 
 export default function Create() {
-	const { FECP_DB, ICMS_DB, IPI_DB, MVA_DB, OBS_DB, NCM_DB } = useDataBase();
 	const [calculaSt, setCalculaSt] = useState<TCalculaSt>(
 		CONST.DEFAULT.CALCULA_ST,
 	);
+	const { obsDataBase } = useObsDataBase();
 
 	useEffect(() => {
 		setCalculaSt(prev => ({
@@ -23,21 +24,6 @@ export default function Create() {
 			estadoOrigem: { id: '', initials: 'SP', name: 'São Paulo' },
 		}));
 	}, []);
-
-	async function handleAddItem(item: TItem) {
-		const itemForAdd = { ...item };
-		itemForAdd.id = Guid.new();
-		const calculaStEditing = { ...calculaSt };
-		calculaStEditing.itens.push(itemForAdd);
-		calculaStEditing.obs = obsCalc({
-			calculaSt: calculaStEditing,
-			obsDataBase: OBS_DB,
-		});
-		reCalcHeader({
-			calculaStForRecalc: calculaStEditing,
-			setCalculaSt,
-		});
-	}
 
 	function handleEditItem(
 		itemForEdit: TItem,
@@ -53,7 +39,7 @@ export default function Create() {
 		if (mode === 'delete') calculaStEditing.itens = [...itemsForKeep];
 		calculaStEditing.obs = obsCalc({
 			calculaSt: calculaStEditing,
-			obsDataBase: OBS_DB,
+			obsDataBase,
 		});
 		return reCalcHeader({
 			calculaStForRecalc: calculaStEditing,
@@ -87,7 +73,14 @@ export default function Create() {
 					mvaDataBase={MVA_DB}
 					ncmDataBase={NCM_DB}
 					handleEditItem={handleEditItem}
-					handleAddItem={handleAddItem}
+					handleAddItem={item =>
+						handleCreateItem({
+							calculaSt,
+							setCalculaSt,
+							item,
+							obsDataBase: obsDataBase || [],
+						})
+					}
 				/>
 			</Grid>
 		</Grid>

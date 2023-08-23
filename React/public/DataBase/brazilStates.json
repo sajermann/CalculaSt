@@ -1,0 +1,246 @@
+[
+	{
+		"id": "82B924D7-1E68-1396-8AB4-2B4E2AD27454",
+		"initials": "SP",
+		"name": "São Paulo",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "110AFC00-7CC0-7EB4-9B52-51DA229E9168",
+		"initials": "RS",
+		"name": "Rio Grande do Sul",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "1F986835-696E-9F69-740B-2D61AF99286A",
+		"initials": "CE",
+		"name": "Ceará",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "209EA568-870E-6018-3D38-F6BF122962B2",
+		"initials": "AP",
+		"name": "Amapá",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "211AFE28-07AE-0B73-4B7C-F428846D1993",
+		"initials": "TO",
+		"name": "Tocantins",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "30E152A7-4B67-5DEE-0916-5AC4BA28A534",
+		"initials": "AL",
+		"name": "Alagoas",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "31A79B16-8525-6B7B-3D45-3C236EC64029",
+		"initials": "PA",
+		"name": "Pará",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "31D7552A-7555-10A1-2029-6E00EF210F1E",
+		"initials": "RJ",
+		"name": "Rio de Janeiro",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "3ECC0D91-2C8E-0060-42CF-5489A80E6BF2",
+		"initials": "MA",
+		"name": "Maranhão",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "4041C68E-4F39-0416-0587-030160D7025B",
+		"initials": "SC",
+		"name": "Santa Catarina",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "43A70E84-51D6-1254-1F6E-3A13E539A54B",
+		"initials": "BA",
+		"name": "Bahia",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "453113BF-6F3D-13B8-A22B-94EF681623D9",
+		"initials": "DF",
+		"name": "Distrito Federal",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "5203B60D-2F75-01F9-5769-190B19774A9F",
+		"initials": "ES",
+		"name": "Espírito Santo",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "65AE8613-2F9E-8DA6-9AE7-8A815D9A5E25",
+		"initials": "SE",
+		"name": "Sergipe",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "779D8FE9-9270-0E00-6D0D-5615AFCF11F9",
+		"initials": "RN",
+		"name": "Rio Grande do Norte",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "7A5DF817-0CCE-6890-8663-3483A80B68FE",
+		"initials": "AM",
+		"name": "Amazonas",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "7CDC2908-85EE-46CF-3B58-60B031049C5C",
+		"initials": "RR",
+		"name": "Roraima",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+
+	{
+		"id": "876C45FA-90C7-3934-01F6-23B71B4E7ABA",
+		"initials": "PE",
+		"name": "Pernambuco",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "90E902B8-9F15-8BC0-6524-5376467656C0",
+		"initials": "MS",
+		"name": "Mato Grosso do Sul",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "9E0B9A9C-2B5F-1252-638E-D07FC8B56BE5",
+		"initials": "PB",
+		"name": "Paraíba",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "9EC81BD2-6A6C-5646-5DE8-45571E842AE5",
+		"initials": "PR",
+		"name": "Paraná",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "AD4BE8A5-0977-4F2B-24B0-1536C4B6431E",
+		"initials": "RO",
+		"name": "Rondônia",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "CF636465-A210-A101-7187-B317F94659CB",
+		"initials": "PI",
+		"name": "Piauí",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "D3D139D9-3765-6996-47C8-E15CC99F02D5",
+		"initials": "GO",
+		"name": "Goiás",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "D80D4441-42A6-0C43-2B87-4A9FAA635BC2",
+		"initials": "MT",
+		"name": "Mato Grosso",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "D8A4E931-3C08-026F-4725-97A0843CA39A",
+		"initials": "AC",
+		"name": "Acre",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	},
+	{
+		"id": "DD64AD62-0348-7048-2E83-BFAD564D2EF9",
+		"initials": "MG",
+		"name": "Minas Gerais",
+		"createdAt": "2021-11-03 20:01:21",
+		"updatedAt": "2021-11-03 20:01:21",
+		"isBlocked": false,
+		"isActive": true
+	}
+]
