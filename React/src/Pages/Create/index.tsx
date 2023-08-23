@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+import { Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { HeaderConfiguration } from '~/Components/HeaderConfiguration';
 import { HeaderInformation } from '~/Components/HeaderInformation';
@@ -47,6 +47,7 @@ export default function Create() {
 		const itemsForKeep = calculaStEditing.itens.filter(
 			itemHere => itemHere.id !== itemForEdit.id,
 		);
+
 		if (mode === 'edit')
 			calculaStEditing.itens = [...itemsForKeep, itemForEdit];
 		if (mode === 'delete') calculaStEditing.itens = [...itemsForKeep];
@@ -61,30 +62,34 @@ export default function Create() {
 	}
 
 	return (
-		<div className="border flex flex-col gap-4 p-5">
-			<HeaderConfiguration
-				calculaSt={calculaSt}
-				setCalculaSt={setCalculaSt}
-				fecpDataBase={FECP_DB}
-				icmsDataBase={ICMS_DB}
-				ipiDataBase={IPI_DB}
-				mvaDataBase={MVA_DB}
-				obsDataBase={OBS_DB}
-			/>
-
-			<HeaderInformation calculaSt={calculaSt} />
-
-			<MainItems
-				items={structuredClone(calculaSt.itens)}
-				calculaSt={calculaSt}
-				fecpDataBase={FECP_DB}
-				icmsDataBase={ICMS_DB}
-				ipiDataBase={IPI_DB}
-				mvaDataBase={MVA_DB}
-				ncmDataBase={NCM_DB}
-				handleEditItem={handleEditItem}
-				handleAddItem={handleAddItem}
-			/>
-		</div>
+		<Grid container sx={{ padding: 2, gap: 4 }}>
+			<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+				<HeaderConfiguration
+					calculaSt={calculaSt}
+					setCalculaSt={setCalculaSt}
+					fecpDataBase={FECP_DB}
+					icmsDataBase={ICMS_DB}
+					ipiDataBase={IPI_DB}
+					mvaDataBase={MVA_DB}
+					obsDataBase={OBS_DB}
+				/>
+			</Grid>
+			<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+				<HeaderInformation calculaSt={calculaSt} />
+			</Grid>
+			<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+				<MainItems
+					items={structuredClone(calculaSt.itens)}
+					calculaSt={calculaSt}
+					fecpDataBase={FECP_DB}
+					icmsDataBase={ICMS_DB}
+					ipiDataBase={IPI_DB}
+					mvaDataBase={MVA_DB}
+					ncmDataBase={NCM_DB}
+					handleEditItem={handleEditItem}
+					handleAddItem={handleAddItem}
+				/>
+			</Grid>
+		</Grid>
 	);
 }

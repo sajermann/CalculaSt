@@ -2,6 +2,8 @@
 	"translations": {
 		"LANGUAGE": "Linguagem",
 		"FROM": "De",
-		"TO": "Para"
+		"TO": "Para",
+		"CREATE_ITEM": "Criar Item",
+		"UPDATE_ITEM": "Atualizar Item"
 	}
 }

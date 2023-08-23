@@ -21,6 +21,7 @@ import {
 import { green } from '@mui/material/colors';
 import { TransitionProps } from '@mui/material/transitions';
 import { ChangeEvent, forwardRef } from 'react';
+import { useTranslation } from '~/Hooks/UseTranslation';
 import { TItem } from '~/Model/TItem';
 import { TNcm } from '~/Model/TNcm';
 import { customFormat } from '~/Utils/CustomFormat';
@@ -41,14 +42,18 @@ type Props = {
 	ncmDataBase: TNcm[];
 	onClose: (data: boolean) => void;
 	onSave: () => void;
-	onDelete: () => void;
+
 	isLoading: boolean;
 	success: boolean;
-	isLoadingDelete: boolean;
-	successDelete: boolean;
+
 	item: TItem;
 	handleSelectNcm: (data: TNcm) => void;
 	handleInput: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+	deleteOptions?: {
+		onDelete: () => void;
+		isLoading: boolean;
+		isSuccess: boolean;
+	};
 };
 
 export function FormItem({
@@ -57,32 +62,14 @@ export function FormItem({
 	ncmDataBase,
 	onClose,
 	onSave,
-	onDelete,
 	isLoading,
 	success,
-	isLoadingDelete,
-	successDelete,
 	item,
 	handleSelectNcm,
 	handleInput,
+	deleteOptions,
 }: Props) {
-	const buttonSx = {
-		...(success && {
-			bgcolor: green[500],
-			'&:hover': {
-				bgcolor: green[700],
-			},
-		}),
-	};
-
-	const buttonSxDelete = {
-		...(successDelete && {
-			bgcolor: green[500],
-			'&:hover': {
-				bgcolor: green[700],
-			},
-		}),
-	};
+	const { translate } = useTranslation();
 
 	return (
 		<Dialog
@@ -94,7 +81,7 @@ export function FormItem({
 			<AppBar position="sticky">
 				<Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
 					<IconButton
-						disabled={isLoading || isLoading || isLoadingDelete}
+						disabled={isLoading || isLoading || deleteOptions?.isLoading}
 						edge="start"
 						color="inherit"
 						onClick={() => onClose(false)}
@@ -104,7 +91,9 @@ export function FormItem({
 						<CloseIcon />
 					</IconButton>
 					<Typography variant="h6">
-						{mode === 'update' ? 'Editar Item' : 'Cri'}
+						{mode === 'update'
+							? translate('UPDATE_ITEM')
+							: translate('CREATE_ITEM')}
 					</Typography>
 
 					<Box sx={{ display: 'flex' }}>
@@ -112,10 +101,11 @@ export function FormItem({
 							<Fab
 								size="medium"
 								aria-label="save"
-								color="primary"
-								disabled={!(item.total > 0.01) || isLoading || isLoadingDelete}
+								color="success"
+								disabled={
+									!(item.total > 0.01) || isLoading || deleteOptions?.isLoading
+								}
 								onClick={onSave}
-								sx={buttonSx}
 							>
 								{success ? <CheckIcon /> : <SaveIcon />}
 							</Fab>
@@ -132,31 +122,39 @@ export function FormItem({
 								/>
 							)}
 						</Box>
-
-						<Box sx={{ m: 1, position: 'relative' }}>
-							<Fab
-								size="medium"
-								aria-label="delete"
-								color="primary"
-								disabled={!(item.total > 0.01) || isLoading || isLoadingDelete}
-								onClick={onDelete}
-								sx={buttonSxDelete}
-							>
-								{successDelete ? <CheckIcon /> : <DeleteForeverIcon />}
-							</Fab>
-							{isLoadingDelete && (
-								<CircularProgress
-									size={61}
-									sx={{
-										color: green[500],
-										position: 'absolute',
-										top: -6,
-										left: -6,
-										zIndex: 1,
-									}}
-								/>
-							)}
-						</Box>
+						{deleteOptions && (
+							<Box sx={{ m: 1, position: 'relative' }}>
+								<Fab
+									size="medium"
+									aria-label="delete"
+									color="error"
+									disabled={
+										!(item.total > 0.01) ||
+										isLoading ||
+										deleteOptions?.isLoading
+									}
+									onClick={deleteOptions.onDelete}
+								>
+									{deleteOptions?.isSuccess ? (
+										<CheckIcon />
+									) : (
+										<DeleteForeverIcon />
+									)}
+								</Fab>
+								{deleteOptions.isLoading && (
+									<CircularProgress
+										size={61}
+										sx={{
+											color: green[500],
+											position: 'absolute',
+											top: -6,
+											left: -6,
+											zIndex: 1,
+										}}
+									/>
+								)}
+							</Box>
+						)}
 					</Box>
 				</Toolbar>
 			</AppBar>

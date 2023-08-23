@@ -9,8 +9,8 @@ import { TItem } from '~/Model/TItem';
 import { TMva } from '~/Model/TMva';
 import { TNcm } from '~/Model/TNcm';
 import { customFormat } from '~/Utils/CustomFormat';
-import { AddItens } from '../AddItens';
-import EditItens from '../EditItens';
+import { CreateItem } from '../CreateItem';
+import { UpdateItem } from '../UpdateItem';
 
 type Props = {
 	items: TItem[];
@@ -201,7 +201,7 @@ export function MainItems({
 			}}
 			enableRowActions
 			renderRowActions={({ row }) => (
-				<EditItens
+				<UpdateItem
 					calculaSt={calculaSt}
 					icmsDataBase={icmsDataBase}
 					ipiDataBase={ipiDataBase}
@@ -213,14 +213,14 @@ export function MainItems({
 				/>
 			)}
 			renderTopToolbarCustomActions={() => (
-				<AddItens
+				<CreateItem
 					calculaSt={calculaSt}
 					icmsDataBase={icmsDataBase}
 					ipiDataBase={ipiDataBase}
 					mvaDataBase={mvaDataBase}
 					ncmDataBase={ncmDataBase}
 					fecpDataBase={fecpDataBase}
-					handleAddItem={handleAddItem}
+					handleCreateItem={handleAddItem}
 				/>
 			)}
 		/>

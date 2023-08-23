@@ -1,3 +1,4 @@
+import { CssBaseline } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { ReactNode, useMemo } from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -21,6 +22,7 @@ export function InjectorProviders({ children }: { children: ReactNode }) {
 	return (
 		<BrowserRouter>
 			<ThemeProvider theme={theme}>
+				<CssBaseline />
 				<Header />
 				<main className="h-full">{children}</main>
 			</ThemeProvider>

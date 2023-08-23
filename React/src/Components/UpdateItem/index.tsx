@@ -1,6 +1,6 @@
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { IconButton } from '@mui/material';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CONST } from '~/Constants';
 import { TCalculaSt } from '~/Model/TCalculaSt';
 import { TFecp } from '~/Model/TFecp';
@@ -9,7 +9,8 @@ import { TIpi } from '~/Model/TIpi';
 import { TItem } from '~/Model/TItem';
 import { TMva } from '~/Model/TMva';
 import { TNcm } from '~/Model/TNcm';
-import { reCalcItem } from '~/Utils/ReCalcItem';
+import { handleInput } from '~/Utils/HandleInput';
+import { handleSelectNcm } from '~/Utils/HandleSelectNcm';
 import { FormItem } from '../FormItem';
 
 type Props = {
@@ -23,7 +24,7 @@ type Props = {
 	itemForEditId: string;
 };
 
-export default function EditItens({
+export function UpdateItem({
 	calculaSt,
 	icmsDataBase,
 	ipiDataBase,
@@ -38,7 +39,7 @@ export default function EditItens({
 	const [isLoading, setLoading] = useState(false);
 	const [success, setSuccess] = useState(false);
 	const [isLoadingDelete, setIsLoadingDelete] = useState(false);
-	const [successDelete, setSuccessDelete] = useState(false);
+	const [isSuccessDelete, setIsSuccessDelete] = useState(false);
 
 	useEffect(() => {
 		const itemSearch = calculaSt.itens.find(item => item.id === itemForEditId);
@@ -66,58 +67,18 @@ export default function EditItens({
 	}
 	function handleDeleteAndConfirm() {
 		if (!isLoadingDelete) {
-			setSuccessDelete(false);
+			setIsSuccessDelete(false);
 			setIsLoadingDelete(true);
 			setTimeout(() => {
-				setSuccessDelete(true);
+				setIsSuccessDelete(true);
 				setIsLoadingDelete(false);
 				setTimeout(() => {
 					handleEditItem(itemForEdit, 'delete');
-					setSuccessDelete(false);
+					setIsSuccessDelete(false);
 					setIsOpen(false);
 				}, 500);
 			}, 2000);
 		}
-	}
-
-	function calcItem(item: TItem) {
-		const itemEditing = reCalcItem({
-			calculaSt,
-			item,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			fecpDataBase,
-		});
-		setItemForEdit(itemEditing);
-	}
-
-	function handleSelectNcm(data: TNcm) {
-		const itemEditing = { ...itemForEdit };
-		itemEditing.ncm = { ...data };
-		console.log({ itemEditing });
-		calcItem({ ...itemEditing }); // Nao tya recalculando verfiicar
-	}
-	function handleInput(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-		const { value } = e.target;
-		const { name } = e.target;
-		const itemEditing = { ...itemForEdit };
-		switch (name) {
-			case 'quantity':
-				itemEditing.quantity = parseFloat(value) || 0;
-				break;
-			case 'price':
-				itemEditing.price = parseFloat(value) || 0;
-				break;
-			case 'description':
-				itemEditing.ncm.description = value;
-				break;
-			default:
-				console.log('Nothing');
-		}
-		itemEditing.total = itemEditing.price * itemEditing.quantity;
-		setItemForEdit(itemEditing);
-		calcItem(itemEditing);
 	}
 
 	return (
@@ -127,19 +88,45 @@ export default function EditItens({
 			</IconButton>
 
 			<FormItem
-				handleInput={handleInput}
-				handleSelectNcm={handleSelectNcm}
+				handleInput={e =>
+					handleInput({
+						calculaSt,
+						eventInput: e,
+						fecpDataBase,
+						icmsDataBase,
+						ipiDataBase,
+						item: itemForEdit,
+						mvaDataBase,
+						ncmDataBase,
+						setItem: setItemForEdit,
+					})
+				}
+				handleSelectNcm={e =>
+					handleSelectNcm({
+						item: itemForEdit,
+						ncm: e,
+						setItem: setItemForEdit,
+						calculaSt,
+						fecpDataBase,
+						icmsDataBase,
+						ipiDataBase,
+						mvaDataBase,
+						ncmDataBase,
+					})
+				}
 				isLoading={isLoading}
-				isLoadingDelete={isLoadingDelete}
 				isOpen={isOpen}
 				item={itemForEdit}
 				mode="update"
 				ncmDataBase={ncmDataBase}
 				onClose={setIsOpen}
-				onDelete={handleDeleteAndConfirm}
 				onSave={handleEditAndConfirm}
 				success={success}
-				successDelete={successDelete}
+				deleteOptions={{
+					isLoading: isLoadingDelete,
+					isSuccess: isSuccessDelete,
+					onDelete: handleDeleteAndConfirm,
+				}}
 			/>
 		</div>
 	);
