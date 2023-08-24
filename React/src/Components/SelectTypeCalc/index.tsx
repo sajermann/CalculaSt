@@ -24,7 +24,7 @@ const optionsList = [
 
 type Props = {
 	handleTypeCalc: (data: TTypeCalc | null) => void;
-	value: TTypeCalc;
+	value: TTypeCalc | null;
 	disabled: boolean;
 };
 

@@ -31,10 +31,10 @@ export function Sidebar() {
 
 	const OPTIONS = [
 		{ label: 'Home', to: '/', icon: <HomeIcon /> },
-		{ label: 'Criar', to: '/create-simulation', icon: <AddIcon /> },
+		{ label: 'Criar', to: '/simulation', icon: <AddIcon /> },
 		{
 			label: 'Simulações',
-			to: '/list-simulation',
+			to: '/simulations',
 			icon: <FormatListNumberedIcon />,
 		},
 	];

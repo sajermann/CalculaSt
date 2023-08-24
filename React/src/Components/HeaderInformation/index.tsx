@@ -1,21 +1,18 @@
 import { Grid, Hidden } from '@mui/material';
-import { TCalculaSt } from '~/Model/TCalculaSt';
+import { useCalculaSt } from '~/Hooks/UseCalculaSt';
 import { customFormat } from '~/Utils/CustomFormat';
 
 function Card({ label, value }: { label: string; value: string }) {
 	return (
 		<div className="flex flex-col gap-1 border-b">
 			<span className="font-normal text-sm">{label}</span>
-
 			<span>{value}</span>
 		</div>
 	);
 }
 
-type Props = {
-	calculaSt: TCalculaSt;
-};
-export function HeaderInformation({ calculaSt }: Props) {
+export function HeaderInformation() {
+	const { calculaSt } = useCalculaSt();
 	return (
 		<Grid container spacing={1}>
 			<Grid item xs={12} sm={4} md={4} lg={2} xl={2}>

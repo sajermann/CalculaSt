@@ -7,7 +7,7 @@ type Props = {
 	handleBrazilState: (data: TBrazilState | null) => void;
 	states: TBrazilState[];
 	value: TBrazilState | null;
-	disabled: boolean;
+	disabled?: boolean;
 	label: string;
 };
 

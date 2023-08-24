@@ -1,7 +1,7 @@
 import { TBrazilState } from './TBrazilState';
 import { TDestinationProduct } from './TDestinationProduct';
 import { TItem } from './TItem';
-import { TTypeCalc } from './TipoCalculo';
+import { TTypeCalc } from './TTypeCalc';
 
 export type TCalculaSt = {
 	estadoOrigem: TBrazilState | null;

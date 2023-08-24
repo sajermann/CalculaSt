@@ -1,8 +1,12 @@
 import Button from '@mui/material/Button';
+import { useObsDataBase } from '~/Hooks/UseObsDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 
 export default function Home() {
 	const { translate } = useTranslation();
+	const { obsDataBase } = useObsDataBase();
+
+	console.log({ obsDataBase });
 
 	return (
 		<div>

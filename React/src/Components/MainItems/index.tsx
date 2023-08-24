@@ -1,29 +1,17 @@
 /* eslint-disable camelcase */
 import { MaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
 import { useMemo } from 'react';
-import { TCalculaSt } from '~/Model/TCalculaSt';
-import { TFecp } from '~/Model/TFecp';
-import { TIcms } from '~/Model/TIcms';
-import { TIpi } from '~/Model/TIpi';
+import { useCalculaSt } from '~/Hooks/UseCalculaSt';
 import { TItem } from '~/Model/TItem';
-import { TMva } from '~/Model/TMva';
-import { TNcm } from '~/Model/TNcm';
 import { customFormat } from '~/Utils/CustomFormat';
 import { CreateItem } from '../CreateItem';
 import { UpdateItem } from '../UpdateItem';
 
 type Props = {
-	items: TItem[];
 	isLoading?: boolean;
 
-	calculaSt: TCalculaSt;
-	icmsDataBase: TIcms[];
-	ipiDataBase: TIpi[];
-	mvaDataBase: TMva[];
-	ncmDataBase: TNcm[];
-	fecpDataBase: TFecp[];
 	handleEditItem: (data: TItem, mode: 'edit' | 'delete') => boolean;
-	handleAddItem: (item: TItem) => void;
+	handleCreateItem: (item: TItem) => void;
 };
 type TCell<T> = {
 	row: {
@@ -31,17 +19,11 @@ type TCell<T> = {
 	};
 };
 export function MainItems({
-	items,
 	isLoading,
-	calculaSt,
-	icmsDataBase,
-	ipiDataBase,
-	mvaDataBase,
-	ncmDataBase,
-	fecpDataBase,
 	handleEditItem,
-	handleAddItem,
+	handleCreateItem,
 }: Props) {
+	const { calculaSt } = useCalculaSt();
 	const columns = useMemo<MRT_ColumnDef<TItem>[]>(
 		() => [
 			{
@@ -187,7 +169,7 @@ export function MainItems({
 			getRowId={row => row.id}
 			enablePagination={false}
 			columns={columns}
-			data={items}
+			data={structuredClone(calculaSt.itens)}
 			initialState={{
 				density: 'compact',
 				isLoading,
@@ -195,7 +177,7 @@ export function MainItems({
 			displayColumnDefOptions={{
 				'mrt-row-actions': {
 					muiTableHeadCellProps: {
-						align: 'center', // change head cell props
+						align: 'center',
 					},
 				},
 			}}
@@ -203,25 +185,12 @@ export function MainItems({
 			renderRowActions={({ row }) => (
 				<UpdateItem
 					calculaSt={calculaSt}
-					icmsDataBase={icmsDataBase}
-					ipiDataBase={ipiDataBase}
-					mvaDataBase={mvaDataBase}
-					ncmDataBase={ncmDataBase}
-					fecpDataBase={fecpDataBase}
 					handleEditItem={handleEditItem}
 					itemForEditId={row.id}
 				/>
 			)}
 			renderTopToolbarCustomActions={() => (
-				<CreateItem
-					calculaSt={calculaSt}
-					icmsDataBase={icmsDataBase}
-					ipiDataBase={ipiDataBase}
-					mvaDataBase={mvaDataBase}
-					ncmDataBase={ncmDataBase}
-					fecpDataBase={fecpDataBase}
-					handleCreateItem={handleAddItem}
-				/>
+				<CreateItem handleCreateItem={handleCreateItem} />
 			)}
 		/>
 	);

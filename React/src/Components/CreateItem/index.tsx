@@ -2,38 +2,30 @@ import AddIcon from '@mui/icons-material/Add';
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import { CONST } from '~/Constants';
+import { useCalculaSt } from '~/Hooks/UseCalculaSt';
+import { useFecpDataBase } from '~/Hooks/UseFecpDataBase';
+import { useIcmsDataBase } from '~/Hooks/UseIcmsDataBase';
+import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
+import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
+import { useNcmDataBase } from '~/Hooks/UseNcmDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
-import { TCalculaSt } from '~/Model/TCalculaSt';
-import { TFecp } from '~/Model/TFecp';
-import { TIcms } from '~/Model/TIcms';
-import { TIpi } from '~/Model/TIpi';
 import { TItem } from '~/Model/TItem';
-import { TMva } from '~/Model/TMva';
-import { TNcm } from '~/Model/TNcm';
 import { handleInput } from '~/Utils/HandleInput';
 import { handleSaveItem } from '~/Utils/HandleSaveItem';
 import { handleSelectNcm } from '~/Utils/HandleSelectNcm';
 import { FormItem } from '../FormItem';
 
 type Props = {
-	calculaSt: TCalculaSt;
-	icmsDataBase: TIcms[];
-	ipiDataBase: TIpi[];
-	mvaDataBase: TMva[];
-	ncmDataBase: TNcm[];
-	fecpDataBase: TFecp[];
 	handleCreateItem: (data: TItem) => void;
 };
 
-export function CreateItem({
-	calculaSt,
-	icmsDataBase,
-	ipiDataBase,
-	mvaDataBase,
-	ncmDataBase,
-	fecpDataBase,
-	handleCreateItem: handleAddItem,
-}: Props) {
+export function CreateItem({ handleCreateItem }: Props) {
+	const { calculaSt } = useCalculaSt();
+	const { fecpDataBase } = useFecpDataBase();
+	const { icmsDataBase } = useIcmsDataBase();
+	const { ipiDataBase } = useIpiDataBase();
+	const { mvaDataBase } = useMvaDataBase();
+	const { ncmDataBase } = useNcmDataBase();
 	const { translate } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
 	const [itemForAdd, setItemForAdd] = useState<TItem>(CONST.DEFAULT.ITEM);
@@ -92,7 +84,7 @@ export function CreateItem({
 				onClose={setIsOpen}
 				onSave={() =>
 					handleSaveItem({
-						handleAddItem,
+						handleAddItem: handleCreateItem,
 						handleResetInfos: () => setItemForAdd(CONST.DEFAULT.ITEM),
 						isLoading,
 						item: itemForAdd,

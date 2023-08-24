@@ -2,38 +2,35 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { IconButton } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { CONST } from '~/Constants';
+import { useFecpDataBase } from '~/Hooks/UseFecpDataBase';
+import { useIcmsDataBase } from '~/Hooks/UseIcmsDataBase';
+import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
+import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
+import { useNcmDataBase } from '~/Hooks/UseNcmDataBase';
 import { TCalculaSt } from '~/Model/TCalculaSt';
-import { TFecp } from '~/Model/TFecp';
-import { TIcms } from '~/Model/TIcms';
-import { TIpi } from '~/Model/TIpi';
 import { TItem } from '~/Model/TItem';
-import { TMva } from '~/Model/TMva';
-import { TNcm } from '~/Model/TNcm';
 import { handleInput } from '~/Utils/HandleInput';
 import { handleSelectNcm } from '~/Utils/HandleSelectNcm';
 import { FormItem } from '../FormItem';
 
 type Props = {
 	calculaSt: TCalculaSt;
-	icmsDataBase: TIcms[];
-	ipiDataBase: TIpi[];
-	mvaDataBase: TMva[];
-	ncmDataBase: TNcm[];
-	fecpDataBase: TFecp[];
+
 	handleEditItem: (data: TItem, mode: 'edit' | 'delete') => boolean;
 	itemForEditId: string;
 };
 
 export function UpdateItem({
 	calculaSt,
-	icmsDataBase,
-	ipiDataBase,
-	mvaDataBase,
-	ncmDataBase,
-	fecpDataBase,
+
 	handleEditItem,
 	itemForEditId,
 }: Props) {
+	const { fecpDataBase } = useFecpDataBase();
+	const { icmsDataBase } = useIcmsDataBase();
+	const { ipiDataBase } = useIpiDataBase();
+	const { mvaDataBase } = useMvaDataBase();
+	const { ncmDataBase } = useNcmDataBase();
 	const [isOpen, setIsOpen] = useState(false);
 	const [itemForEdit, setItemForEdit] = useState<TItem>(CONST.DEFAULT.ITEM);
 	const [isLoading, setLoading] = useState(false);

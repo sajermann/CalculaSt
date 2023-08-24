@@ -1,43 +1,29 @@
 import { Grid } from '@mui/material';
-import { Dispatch, SetStateAction } from 'react';
 import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { SelectDestinationProduct } from '~/Components/SelectDestinationProduct';
 import { SelectTrueOrFalse } from '~/Components/SelectTrueOrFalse';
 import { SelectTypeCalc } from '~/Components/SelectTypeCalc';
 import { useBrazilStatesDataBase } from '~/Hooks/UseBrazilStatesDataBase';
+import { useCalculaSt } from '~/Hooks/UseCalculaSt';
+import { useFecpDataBase } from '~/Hooks/UseFecpDataBase';
+import { useIcmsDataBase } from '~/Hooks/UseIcmsDataBase';
+import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
+import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
+import { useObsDataBase } from '~/Hooks/UseObsDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TBrazilState } from '~/Model/TBrazilState';
-import { TCalculaSt } from '~/Model/TCalculaSt';
 import { TDestinationProduct } from '~/Model/TDestinationProduct';
-import { TFecp } from '~/Model/TFecp';
-import { TIcms } from '~/Model/TIcms';
-import { TIpi } from '~/Model/TIpi';
-import { TMva } from '~/Model/TMva';
-import { TObs } from '~/Model/TObs';
 import { TTypeCalc } from '~/Model/TTypeCalc';
 import { reCalcAll } from '~/Utils/ReCalcAll';
 
-type Props = {
-	calculaSt: TCalculaSt;
-	setCalculaSt: Dispatch<SetStateAction<TCalculaSt>>;
-	icmsDataBase: TIcms[];
-	ipiDataBase: TIpi[];
-	mvaDataBase: TMva[];
-	fecpDataBase: TFecp[];
-	obsDataBase: TObs[];
-};
-
-export function HeaderConfiguration({
-	calculaSt,
-	setCalculaSt,
-	icmsDataBase,
-	ipiDataBase,
-	mvaDataBase,
-	fecpDataBase,
-	obsDataBase,
-}: Props) {
-	// const { BRAZIL_STATES_DB } = useDataBase();
-	const { BRAZIL_STATES_DB } = useBrazilStatesDataBase();
+export function HeaderConfiguration() {
+	const { calculaSt, setCalculaSt } = useCalculaSt();
+	const { brazilStatesDataBase } = useBrazilStatesDataBase();
+	const { fecpDataBase } = useFecpDataBase();
+	const { icmsDataBase } = useIcmsDataBase();
+	const { ipiDataBase } = useIpiDataBase();
+	const { mvaDataBase } = useMvaDataBase();
+	const { obsDataBase } = useObsDataBase();
 	const { translate } = useTranslation();
 	function mustDisabled(dataForVerify: string): boolean {
 		if (dataForVerify === 'DestinoMercadoria') {
@@ -182,7 +168,7 @@ export function HeaderConfiguration({
 		<Grid container spacing={1}>
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectBrazilState
-					states={BRAZIL_STATES_DB || []}
+					states={brazilStatesDataBase}
 					label={translate('FROM')}
 					handleBrazilState={handleBrazilStateOrigin}
 					value={calculaSt.estadoOrigem}
@@ -192,11 +178,10 @@ export function HeaderConfiguration({
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectBrazilState
-					states={BRAZIL_STATES_DB || []}
+					states={brazilStatesDataBase}
 					value={calculaSt.estadoDestino}
 					label={translate('TO')}
 					handleBrazilState={handleBrazilStateDestiny}
-					disabled={false}
 				/>
 			</Grid>
 
