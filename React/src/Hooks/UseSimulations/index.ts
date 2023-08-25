@@ -3,6 +3,19 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { TCalculaSt } from '~/Model/TCalculaSt';
 
+function deleteSimulation(
+	simulations: TCalculaSt[],
+	simulationToDelete: TCalculaSt,
+) {
+	const newSimulations: TCalculaSt[] = [];
+	[...simulations].forEach(simulation => {
+		if (simulation?.id !== simulationToDelete?.id) {
+			newSimulations.push({ ...simulation });
+		}
+	});
+	return [...newSimulations];
+}
+
 interface Props {
 	simulations: TCalculaSt[];
 	createSimulation: (data: TCalculaSt) => boolean;
@@ -14,21 +27,43 @@ type SetProps = (
 	replace?: boolean | undefined,
 ) => void;
 
-export const useDarkMode = create<Props>()(
+export const useSimulations = create<Props>()(
 	persist(
 		zukeeper((set: SetProps) => ({
 			simulations: [],
+
 			createSimulation: (data: TCalculaSt) => {
 				set(state => ({
 					...state,
-					createSimulation: [],
+					simulations: [...state.simulations, { ...data }],
+				}));
+				return true;
+			},
+
+			updateSimulation: (simulationToSave: TCalculaSt) => {
+				set(state => ({
+					...state,
+					simulations: [...state.simulations].map(simulation => {
+						if (simulation?.id === simulationToSave?.id) {
+							return { ...simulationToSave };
+						}
+						return { ...simulation };
+					}),
+				}));
+				return true;
+			},
+
+			deleteSimulation: (simulationToDelete: TCalculaSt) => {
+				set(state => ({
+					...state,
+					simulations: deleteSimulation(state.simulations, simulationToDelete),
 				}));
 				return true;
 			},
 		})),
 		{
-			name: '@calcula-st:simulations', // name of the item in the storage (must be unique)
+			name: '@calcula-st:simulations',
 		},
 	),
 );
-window.store = useDarkMode;
+window.store = useSimulations;

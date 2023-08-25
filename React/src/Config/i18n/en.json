@@ -4,6 +4,10 @@
 		"FROM": "From",
 		"TO": "To",
 		"CREATE_ITEM": "Create Item",
-		"UPDATE_ITEM": "Update Item"
+		"UPDATE_ITEM": "Update Item",
+		"TITLE": "Title",
+		"CONFIRM": "Confirm",
+		"SAVE": "Save",
+		"CANCEL": "Cancel"
 	}
 }

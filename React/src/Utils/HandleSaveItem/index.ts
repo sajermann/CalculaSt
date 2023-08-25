@@ -1,21 +1,18 @@
-import { TItem } from '~/Model/TItem';
-
 type Props = {
-	item: TItem;
 	isLoading: boolean;
 	setSuccess: (data: boolean) => void;
 	setLoading: (data: boolean) => void;
 	setIsOpen: (data: boolean) => void;
-	handleAddItem: (data: TItem) => void;
-	handleResetInfos: () => void;
+	onFinalize: () => void;
+	handleResetInfos?: () => void;
 };
 
 export function handleSaveItem({
 	isLoading,
 	setSuccess,
 	setLoading,
-	handleAddItem,
-	item,
+	onFinalize,
+
 	handleResetInfos,
 	setIsOpen,
 }: Props) {
@@ -26,9 +23,9 @@ export function handleSaveItem({
 			setSuccess(true);
 			setLoading(false);
 			setTimeout(() => {
-				handleAddItem(item);
+				onFinalize();
 				setSuccess(false);
-				handleResetInfos();
+				if (handleResetInfos) handleResetInfos();
 				setIsOpen(false);
 			}, 500);
 		}, 2000);

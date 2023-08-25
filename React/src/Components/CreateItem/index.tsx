@@ -8,24 +8,23 @@ import { useIcmsDataBase } from '~/Hooks/UseIcmsDataBase';
 import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
 import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
 import { useNcmDataBase } from '~/Hooks/UseNcmDataBase';
+import { useObsDataBase } from '~/Hooks/UseObsDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TItem } from '~/Model/TItem';
+import { handleCreateItem } from '~/Utils/HandleCreateItem';
 import { handleInput } from '~/Utils/HandleInput';
 import { handleSaveItem } from '~/Utils/HandleSaveItem';
 import { handleSelectNcm } from '~/Utils/HandleSelectNcm';
 import { FormItem } from '../FormItem';
 
-type Props = {
-	handleCreateItem: (data: TItem) => void;
-};
-
-export function CreateItem({ handleCreateItem }: Props) {
-	const { calculaSt } = useCalculaSt();
+export function CreateItem() {
+	const { calculaSt, setCalculaSt } = useCalculaSt();
 	const { fecpDataBase } = useFecpDataBase();
 	const { icmsDataBase } = useIcmsDataBase();
 	const { ipiDataBase } = useIpiDataBase();
 	const { mvaDataBase } = useMvaDataBase();
 	const { ncmDataBase } = useNcmDataBase();
+	const { obsDataBase } = useObsDataBase();
 	const { translate } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
 	const [itemForAdd, setItemForAdd] = useState<TItem>(CONST.DEFAULT.ITEM);
@@ -84,10 +83,15 @@ export function CreateItem({ handleCreateItem }: Props) {
 				onClose={setIsOpen}
 				onSave={() =>
 					handleSaveItem({
-						handleAddItem: handleCreateItem,
+						onFinalize: () =>
+							handleCreateItem({
+								calculaSt,
+								setCalculaSt,
+								item: itemForAdd,
+								obsDataBase,
+							}),
 						handleResetInfos: () => setItemForAdd(CONST.DEFAULT.ITEM),
 						isLoading,
-						item: itemForAdd,
 						setIsOpen,
 						setLoading,
 						setSuccess,

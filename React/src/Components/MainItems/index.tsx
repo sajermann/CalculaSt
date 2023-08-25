@@ -9,20 +9,13 @@ import { UpdateItem } from '../UpdateItem';
 
 type Props = {
 	isLoading?: boolean;
-
-	handleEditItem: (data: TItem, mode: 'edit' | 'delete') => boolean;
-	handleCreateItem: (item: TItem) => void;
 };
 type TCell<T> = {
 	row: {
 		original: T;
 	};
 };
-export function MainItems({
-	isLoading,
-	handleEditItem,
-	handleCreateItem,
-}: Props) {
+export function MainItems({ isLoading }: Props) {
 	const { calculaSt } = useCalculaSt();
 	const columns = useMemo<MRT_ColumnDef<TItem>[]>(
 		() => [
@@ -182,16 +175,8 @@ export function MainItems({
 				},
 			}}
 			enableRowActions
-			renderRowActions={({ row }) => (
-				<UpdateItem
-					calculaSt={calculaSt}
-					handleEditItem={handleEditItem}
-					itemForEditId={row.id}
-				/>
-			)}
-			renderTopToolbarCustomActions={() => (
-				<CreateItem handleCreateItem={handleCreateItem} />
-			)}
+			renderRowActions={({ row }) => <UpdateItem itemForEditId={row.id} />}
+			renderTopToolbarCustomActions={() => <CreateItem />}
 		/>
 	);
 }

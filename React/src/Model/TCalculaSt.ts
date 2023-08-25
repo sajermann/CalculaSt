@@ -4,6 +4,8 @@ import { TItem } from './TItem';
 import { TTypeCalc } from './TTypeCalc';
 
 export type TCalculaSt = {
+	id?: string;
+	title?: string;
 	estadoOrigem: TBrazilState | null;
 	estadoDestino: TBrazilState | null;
 	destinoMercadoria: TDestinationProduct | null;
