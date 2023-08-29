@@ -7,6 +7,7 @@ import { useDarkMode } from '~/Hooks/UseDarkMode';
 
 import '../../Config/i18n';
 import { Header } from '../Header';
+import { Toast } from '../Toast';
 
 export function InjectorProviders({ children }: { children: ReactNode }) {
 	const { isDarkMode } = useDarkMode();
@@ -24,6 +25,7 @@ export function InjectorProviders({ children }: { children: ReactNode }) {
 		<BrowserRouter>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
+				<Toast />
 				<QueryClientProvider
 					client={
 						new QueryClient({

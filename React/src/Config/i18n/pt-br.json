@@ -8,6 +8,12 @@
 		"TITLE": "Título",
 		"CONFIRM": "Confirmar",
 		"SAVE": "Salvar",
-		"CANCEL": "Cancelar"
+		"CANCEL": "Cancelar",
+		"DELETE": "Excluir",
+		"SAVE_SIMULATION": "Salvar Simulação",
+		"DELETE_SIMULATION": "Excluir Simulação",
+		"SURE_DELETE_SIMULATION": "Confirma a exclusão da simulação?",
+
+		"SIMULATION_NOT_FOUND": "Simulação não encontrada"
 	}
 }

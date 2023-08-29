@@ -8,6 +8,11 @@
 		"TITLE": "Title",
 		"CONFIRM": "Confirm",
 		"SAVE": "Save",
-		"CANCEL": "Cancel"
+		"CANCEL": "Cancel",
+		"DELETE": "Delete",
+		"SAVE_SIMULATION": "Save Simulation",
+		"DELETE_SIMULATION": "Delete Simulation",
+		"SURE_DELETE_SIMULATION": "Sure Delete Simulation?",
+		"SIMULATION_NOT_FOUND": "Simulation Not Found"
 	}
 }

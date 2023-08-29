@@ -1,9 +1,8 @@
-import zukeeper from 'zukeeper';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { TCalculaSt } from '~/Model/TCalculaSt';
 
-function deleteSimulation(
+function deleteSimulationInternal(
 	simulations: TCalculaSt[],
 	simulationToDelete: TCalculaSt,
 ) {
@@ -18,19 +17,22 @@ function deleteSimulation(
 
 interface Props {
 	simulations: TCalculaSt[];
+	getSimulation: (data?: string) => TCalculaSt | undefined;
 	createSimulation: (data: TCalculaSt) => boolean;
 	updateSimulation: (data: TCalculaSt) => boolean;
 	deleteSimulation: (data: TCalculaSt) => boolean;
 }
-type SetProps = (
-	partial: Props | Partial<Props> | ((state: Props) => Props | Partial<Props>),
-	replace?: boolean | undefined,
-) => void;
 
 export const useSimulations = create<Props>()(
 	persist(
-		zukeeper((set: SetProps) => ({
+		(set, get) => ({
 			simulations: [],
+
+			getSimulation: (id?: string) => {
+				const tt = get().simulations.find(simulation => simulation.id === id);
+				console.log({ tt });
+				return tt;
+			},
 
 			createSimulation: (data: TCalculaSt) => {
 				set(state => ({
@@ -56,14 +58,16 @@ export const useSimulations = create<Props>()(
 			deleteSimulation: (simulationToDelete: TCalculaSt) => {
 				set(state => ({
 					...state,
-					simulations: deleteSimulation(state.simulations, simulationToDelete),
+					simulations: deleteSimulationInternal(
+						state.simulations,
+						simulationToDelete,
+					),
 				}));
 				return true;
 			},
-		})),
+		}),
 		{
 			name: '@calcula-st:simulations',
 		},
 	),
 );
-window.store = useSimulations;

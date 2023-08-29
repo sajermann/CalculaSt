@@ -1,20 +1,39 @@
 import { Grid } from '@mui/material';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { HeaderConfiguration } from '~/Components/HeaderConfiguration';
 import { HeaderInformation } from '~/Components/HeaderInformation';
 import { MainItems } from '~/Components/MainItems';
 import { useCalculaSt } from '~/Hooks/UseCalculaSt';
+import { useSimulations } from '~/Hooks/UseSimulations';
+import { useToast } from '~/Hooks/UseToast';
+import { useTranslation } from '~/Hooks/UseTranslation';
 
 export function Simulation() {
 	const { id } = useParams<{ id: string }>();
+	const navigate = useNavigate();
+	const { setMessage, setIsOpen, setSeverity } = useToast();
+	const { translate } = useTranslation();
 	const { setCalculaSt } = useCalculaSt();
+	const { getSimulation } = useSimulations();
 
 	useEffect(() => {
-		console.log({ id });
-		setCalculaSt({
-			estadoOrigem: { id: '', initials: 'SP', name: 'São Paulo' },
-		});
+		if (!id) {
+			setCalculaSt({
+				estadoOrigem: { id: '', initials: 'SP', name: 'São Paulo' },
+			});
+			return;
+		}
+		const result = getSimulation(id);
+		console.log({ id, result });
+		if (result) {
+			setCalculaSt({ ...result });
+			return;
+		}
+		setMessage(translate('SIMULATION_NOT_FOUND'));
+		setSeverity('error');
+		setIsOpen(true);
+		navigate('/simulations');
 	}, []);
 
 	return (

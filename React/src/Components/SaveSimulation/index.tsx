@@ -1,27 +1,33 @@
-import { Box, CircularProgress, FormControl, TextField } from '@mui/material';
+import { FormControl, TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { green } from '@mui/material/colors';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCalculaSt } from '~/Hooks/UseCalculaSt';
 import { useSimulations } from '~/Hooks/UseSimulations';
+import { useToast } from '~/Hooks/UseToast';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { handleCreateSimulation } from '~/Utils/HandleCreateSimulation';
-import { handleSaveItem } from '~/Utils/HandleSaveItem';
+import { handleSimulateFetch } from '~/Utils/HandleSimulateFetch';
 import { handleUpdateSimulation } from '~/Utils/HandleUpdateSimulation';
+import { FeedbackButtonText } from '../FeedbackButtonText';
 
 export function SaveSimulation() {
+	const navigate = useNavigate();
+	const { setMessage, setIsOpen: setIsOpenToast } = useToast();
 	const [title, setTitle] = useState('');
 	const { calculaSt, setCalculaSt } = useCalculaSt();
 	const { createSimulation, updateSimulation } = useSimulations();
 	const { translate } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
-	const [isSuccessSave, setIsSuccessSave] = useState(false);
-	const [isLoading, setIsLoading] = useState(false);
+	const [isSuccessCreate, setIsSuccessCreate] = useState(false);
+	const [isLoadingCreate, setIsLoadingCreate] = useState(false);
+	const [isSuccessUpdate, setIsSuccessUpdate] = useState(false);
+	const [isLoadingUpdate, setIsLoadingUpdate] = useState(false);
 
 	const handleClose = () => {
 		setIsOpen(false);
@@ -32,43 +38,43 @@ export function SaveSimulation() {
 			setIsOpen(true);
 			return;
 		}
-		console.log('salvando');
-		handleSaveItem({
-			onFinalize: () =>
+		handleSimulateFetch({
+			onFinalize: () => {
 				handleUpdateSimulation({
 					calculaSt,
 					updateSimulation,
-				}),
-			isLoading,
+				});
+				setMessage('Atualizado com sucesso');
+				setIsOpenToast(true);
+			},
+			isLoading: isSuccessUpdate,
 			setIsOpen,
-			setLoading: setIsLoading,
-			setSuccess: setIsSuccessSave,
+			setLoading: setIsLoadingUpdate,
+			setSuccess: setIsSuccessUpdate,
 		});
 	}
 
-	const buttonSx = {
-		...(isSuccessSave && {
-			bgcolor: green[500],
-			'&:hover': {
-				bgcolor: green[700],
-			},
-		}),
-	};
-
 	return (
 		<div>
-			<Button variant="outlined" onClick={handleSave}>
-				{translate('SAVE')}
-			</Button>
+			<FeedbackButtonText
+				disabled={isLoadingUpdate}
+				onClick={handleSave}
+				isLoading={isLoadingUpdate}
+				isSuccess={isSuccessUpdate}
+				text={translate('SAVE')}
+			/>
+
 			<Dialog
 				open={isOpen}
 				onClose={handleClose}
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
 			>
-				<DialogTitle id="alert-dialog-title">{translate('TITLE')}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">
+					{translate('SAVE_SIMULATION')}
+				</DialogTitle>
 				<DialogContent>
-					<DialogContentText id="alert-dialog-description">
+					<DialogContentText id="alert-dialog-description" className="w-72">
 						<FormControl fullWidth>
 							<TextField
 								onChange={e => setTitle(e.target.value)}
@@ -85,45 +91,33 @@ export function SaveSimulation() {
 						</FormControl>
 					</DialogContentText>
 				</DialogContent>
-				<DialogActions>
+				<DialogActions className="flex gap-4 justify-end">
 					<Button onClick={handleClose}>{translate('CANCEL')}</Button>
-					<Box sx={{ m: 1, position: 'relative' }}>
-						<Button
-							variant="contained"
-							sx={buttonSx}
-							disabled={isLoading || !title}
-							onClick={() =>
-								handleSaveItem({
-									onFinalize: () =>
-										handleCreateSimulation({
-											calculaSt,
-											createSimulation,
-											setCalculaSt,
-											title,
-										}),
-									isLoading,
-									setIsOpen,
-									setLoading: setIsLoading,
-									setSuccess: setIsSuccessSave,
-								})
-							}
-						>
-							{translate('CONFIRM')}
-						</Button>
-						{isLoading && (
-							<CircularProgress
-								size={24}
-								sx={{
-									color: green[500],
-									position: 'absolute',
-									top: '50%',
-									left: '50%',
-									marginTop: '-12px',
-									marginLeft: '-12px',
-								}}
-							/>
-						)}
-					</Box>
+					<FeedbackButtonText
+						disabled={isLoadingCreate || !title}
+						onClick={() =>
+							handleSimulateFetch({
+								onFinalize: () => {
+									handleCreateSimulation({
+										calculaSt,
+										createSimulation,
+										setCalculaSt,
+										title,
+										navigation: id => navigate(`/simulation/${id}`),
+									});
+									setMessage('Salvo com sucesso');
+									setIsOpenToast(true);
+								},
+								isLoading: isLoadingCreate,
+								setIsOpen,
+								setLoading: setIsLoadingCreate,
+								setSuccess: setIsSuccessCreate,
+							})
+						}
+						isLoading={isLoadingCreate}
+						isSuccess={isSuccessCreate}
+						text={translate('CONFIRM')}
+					/>
 				</DialogActions>
 			</Dialog>
 		</div>

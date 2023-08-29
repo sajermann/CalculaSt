@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { SelectDestinationProduct } from '~/Components/SelectDestinationProduct';
 import { SelectTrueOrFalse } from '~/Components/SelectTrueOrFalse';
@@ -15,6 +15,7 @@ import { TBrazilState } from '~/Model/TBrazilState';
 import { TDestinationProduct } from '~/Model/TDestinationProduct';
 import { TTypeCalc } from '~/Model/TTypeCalc';
 import { reCalcAll } from '~/Utils/ReCalcAll';
+import { DeleteSimulation } from '../DeleteSimulation';
 import { SaveSimulation } from '../SaveSimulation';
 
 export function HeaderConfiguration() {
@@ -172,8 +173,8 @@ export function HeaderConfiguration() {
 					<Typography variant="h6">{calculaSt.title}</Typography>
 				</div>
 				<div className="flex gap-4">
+					<DeleteSimulation />
 					<SaveSimulation />
-					<Button>Excluir</Button>
 				</div>
 			</Grid>
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
