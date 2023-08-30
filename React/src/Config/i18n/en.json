@@ -1,5 +1,6 @@
 {
 	"translations": {
+		"CREATE": "Create",
 		"LANGUAGE": "Language",
 		"FROM": "From",
 		"TO": "To",
@@ -13,6 +14,7 @@
 		"SAVE_SIMULATION": "Save Simulation",
 		"DELETE_SIMULATION": "Delete Simulation",
 		"SURE_DELETE_SIMULATION": "Sure Delete Simulation?",
-		"SIMULATION_NOT_FOUND": "Simulation Not Found"
+		"SIMULATION_NOT_FOUND": "Simulation Not Found",
+		"BACK": "Back"
 	}
 }

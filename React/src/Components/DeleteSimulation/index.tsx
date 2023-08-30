@@ -17,7 +17,7 @@ export function DeleteSimulation() {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
 	const { setMessage, setIsOpen: setIsOpenToast } = useToast();
-	const { calculaSt } = useCalculaSt();
+	const { calculaSt, resetCalculaSt } = useCalculaSt();
 	const { deleteSimulation } = useSimulations();
 	const { translate } = useTranslation();
 	const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +28,7 @@ export function DeleteSimulation() {
 		handleSimulateFetch({
 			onFinalize: () => {
 				deleteSimulation(calculaSt);
+				resetCalculaSt();
 				setMessage('Excluído com sucesso');
 				setIsOpenToast(true);
 				navigate('/simulations');
@@ -43,7 +44,7 @@ export function DeleteSimulation() {
 
 	return (
 		<div>
-			<Button color="error" onClick={() => setIsOpen(true)}>
+			<Button color="error" onClick={() => setIsOpen(true)} variant="outlined">
 				{translate('DELETE')}
 			</Button>
 

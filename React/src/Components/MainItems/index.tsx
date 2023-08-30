@@ -2,6 +2,7 @@
 import { MaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
 import { useMemo } from 'react';
 import { useCalculaSt } from '~/Hooks/UseCalculaSt';
+import { useTranslation } from '~/Hooks/UseTranslation';
 import { TItem } from '~/Model/TItem';
 import { customFormat } from '~/Utils/CustomFormat';
 import { CreateItem } from '../CreateItem';
@@ -16,6 +17,7 @@ type TCell<T> = {
 	};
 };
 export function MainItems({ isLoading }: Props) {
+	const { localizationMTR } = useTranslation();
 	const { calculaSt } = useCalculaSt();
 	const columns = useMemo<MRT_ColumnDef<TItem>[]>(
 		() => [
@@ -177,6 +179,7 @@ export function MainItems({ isLoading }: Props) {
 			enableRowActions
 			renderRowActions={({ row }) => <UpdateItem itemForEditId={row.id} />}
 			renderTopToolbarCustomActions={() => <CreateItem />}
+			localization={localizationMTR}
 		/>
 	);
 }

@@ -14,10 +14,10 @@ export function Simulation() {
 	const navigate = useNavigate();
 	const { setMessage, setIsOpen, setSeverity } = useToast();
 	const { translate } = useTranslation();
-	const { setCalculaSt } = useCalculaSt();
+	const { setCalculaSt, resetCalculaSt } = useCalculaSt();
 	const { getSimulation } = useSimulations();
 
-	useEffect(() => {
+	function load() {
 		if (!id) {
 			setCalculaSt({
 				estadoOrigem: { id: '', initials: 'SP', name: 'São Paulo' },
@@ -25,7 +25,6 @@ export function Simulation() {
 			return;
 		}
 		const result = getSimulation(id);
-		console.log({ id, result });
 		if (result) {
 			setCalculaSt({ ...result });
 			return;
@@ -34,6 +33,11 @@ export function Simulation() {
 		setSeverity('error');
 		setIsOpen(true);
 		navigate('/simulations');
+	}
+
+	useEffect(() => {
+		load();
+		return () => resetCalculaSt();
 	}, []);
 
 	return (

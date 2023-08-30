@@ -19,6 +19,7 @@ import {
 	MaterialReactTable,
 } from 'material-react-table';
 import { forwardRef, useEffect, useMemo, useState } from 'react';
+import { useTranslation } from '~/Hooks/UseTranslation';
 import { TNcm } from '~/Model/TNcm';
 
 const Transition = forwardRef(
@@ -39,6 +40,7 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 	const [products] = useState<TNcm[]>(ncmDataBase);
 	const [open, setOpen] = useState(false);
 	const [rowSelection, setRowSelection] = useState<MRT_RowSelectionState>({});
+	const { localizationMTR } = useTranslation();
 
 	useEffect(() => {
 		if (isFirstUseEffect) {
@@ -114,6 +116,7 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 							initialState={{
 								density: 'compact',
 							}}
+							localization={localizationMTR}
 						/>
 					</div>
 				</Fade>

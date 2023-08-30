@@ -1,4 +1,5 @@
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { SelectDestinationProduct } from '~/Components/SelectDestinationProduct';
 import { SelectTrueOrFalse } from '~/Components/SelectTrueOrFalse';
@@ -173,6 +174,9 @@ export function HeaderConfiguration() {
 					<Typography variant="h6">{calculaSt.title}</Typography>
 				</div>
 				<div className="flex gap-4">
+					<Link to="/simulations">
+						<Button>{translate('BACK')}</Button>
+					</Link>
 					<DeleteSimulation />
 					<SaveSimulation />
 				</div>

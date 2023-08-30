@@ -1,4 +1,7 @@
+/* eslint-disable camelcase */
 import i18next from 'i18next';
+import { MRT_Localization_EN } from 'material-react-table/locales/en';
+import { MRT_Localization_PT_BR } from 'material-react-table/locales/pt-BR';
 import { useTranslation as useTranslationOficial } from 'react-i18next';
 
 export function useTranslation() {
@@ -13,5 +16,15 @@ export function useTranslation() {
 		i18n.changeLanguage(language);
 	}
 
-	return { translate, changeLanguage, currentLanguage };
+	const translateMaterialTable = {
+		'pt-BR': MRT_Localization_PT_BR,
+		en: MRT_Localization_EN,
+	};
+
+	return {
+		translate,
+		changeLanguage,
+		currentLanguage,
+		localizationMTR: translateMaterialTable[currentLanguage as 'en' | 'pt-BR'],
+	};
 }
