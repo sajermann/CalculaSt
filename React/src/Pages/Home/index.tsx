@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { useState } from 'react';
 import {
 	Bar,
@@ -10,6 +11,7 @@ import {
 import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { useDataBase } from '~/Hooks/UseDataBase';
 import { useSimulations } from '~/Hooks/UseSimulations';
+import { TBrazilState } from '~/Model/TBrazilState';
 import { TCalculaSt } from '~/Model/TCalculaSt';
 import { customFormat } from '~/Utils/CustomFormat';
 
@@ -96,14 +98,25 @@ export function Home() {
 			),
 		},
 	];
+
+	function handleBrazilState(event: TBrazilState | null) {
+		if (!event) {
+			setDataFiltred([...simulations]);
+			return;
+		}
+		const t = simulations.filter(
+			item => item.estadoDestino?.initials === event?.initials,
+		);
+		setDataFiltred([...t]);
+	}
 	return (
 		<div className="flex w-full h-full flex-1 flex-col gap-4 p-4">
-			<div>
+			<Typography variant="h6">Dashboard</Typography>
+			<div className="flex gap-4">
 				<SelectBrazilState
 					states={brazilStatesDataBase}
-					// value={calculaSt.estadoDestino}
 					label="Estado"
-					handleBrazilState={event => console.log({ event })}
+					handleBrazilState={handleBrazilState}
 				/>
 			</div>
 			<ResponsiveContainer width="100%" height="70%">

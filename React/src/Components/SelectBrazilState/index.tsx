@@ -6,7 +6,7 @@ import { TBrazilState } from '~/Model/TBrazilState';
 type Props = {
 	handleBrazilState?: (data: TBrazilState | null) => void;
 	states: TBrazilState[];
-	value: TBrazilState | null;
+	value?: TBrazilState | null;
 	disabled?: boolean;
 	label: string;
 };

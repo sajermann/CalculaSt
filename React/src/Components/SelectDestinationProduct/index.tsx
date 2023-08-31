@@ -15,8 +15,8 @@ const optionsList = [
 
 type Props = {
 	handleDestinationProduct: (data: TDestinationProduct | null) => void;
-	value: TDestinationProduct | null;
-	disabled: boolean;
+	value?: TDestinationProduct | null;
+	disabled?: boolean;
 };
 export function SelectDestinationProduct({
 	handleDestinationProduct,
