@@ -1,3 +1,4 @@
+import { useBrazilStatesDataBase } from '../UseBrazilStatesDataBase';
 import { useFecpDataBase } from '../UseFecpDataBase';
 import { useIcmsDataBase } from '../UseIcmsDataBase';
 import { useIpiDataBase } from '../UseIpiDataBase';
@@ -12,6 +13,7 @@ export function useDataBase() {
 	const { mvaDataBase } = useMvaDataBase();
 	const { ncmDataBase } = useNcmDataBase();
 	const { obsDataBase } = useObsDataBase();
+	const { brazilStatesDataBase } = useBrazilStatesDataBase();
 
 	return {
 		fecpDataBase,
@@ -20,5 +22,6 @@ export function useDataBase() {
 		mvaDataBase,
 		ncmDataBase,
 		obsDataBase,
+		brazilStatesDataBase,
 	};
 }

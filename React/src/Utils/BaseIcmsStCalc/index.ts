@@ -14,7 +14,7 @@ type Props = {
 	fecpDataBase: TFecp[];
 };
 
-export default function baseIcmsStCalc({
+export function baseIcmsStCalc({
 	calculaSt,
 	total,
 	ipi,
@@ -27,16 +27,16 @@ export default function baseIcmsStCalc({
 	try {
 		if (
 			ncm === '' ||
-			calculaSt.estadoDestino.name === '' ||
+			calculaSt.estadoDestino?.name === '' ||
 			calculaSt.estadoDestino === undefined
 		)
 			return 0;
 
-		if (calculaSt.destinoMercadoria.name === 'Revenda') {
+		if (calculaSt.destinoMercadoria?.name === 'Revenda') {
 			const mvaLocalizado = mvaDataBase.find(
 				mva =>
 					mva.states.find(
-						state => state.initials === calculaSt.estadoDestino.initials,
+						state => state.initials === calculaSt.estadoDestino?.initials,
 					) && mva.ncms.find(_ncm => _ncm.code === ncm),
 			);
 			if (!mvaLocalizado) return 0;
@@ -50,20 +50,20 @@ export default function baseIcmsStCalc({
 			return (total + ipi) * parseFloat(result);
 		}
 		if (
-			calculaSt.destinoMercadoria.name === 'Consumo' &&
-			calculaSt.tipoCalculo.name === 'Fora' &&
+			calculaSt.destinoMercadoria?.name === 'Consumo' &&
+			calculaSt.tipoCalculo?.name === 'Fora' &&
 			calculaSt.clienteContribuinte
 		) {
 			return total + ipi;
 		}
 		if (
-			calculaSt.destinoMercadoria.name === 'Consumo' &&
-			(calculaSt.tipoCalculo.name === 'Dentro' ||
-				calculaSt.tipoCalculo.name === 'BS Dupla') &&
+			calculaSt.destinoMercadoria?.name === 'Consumo' &&
+			(calculaSt.tipoCalculo?.name === 'Dentro' ||
+				calculaSt.tipoCalculo?.name === 'BS Dupla') &&
 			calculaSt.clienteContribuinte
 		) {
 			let fecpLocalized = fecpDataBase.find(
-				item => item.state.initials === calculaSt.estadoDestino.initials,
+				item => item.state.initials === calculaSt.estadoDestino?.initials,
 			);
 			if (!fecpLocalized) {
 				fecpLocalized = {
@@ -74,7 +74,7 @@ export default function baseIcmsStCalc({
 			}
 
 			const icmsIntraLocalizado = icmsDataBase.filter(
-				el => el.state.initials === calculaSt.estadoDestino.initials,
+				el => el.state.initials === calculaSt.estadoDestino?.initials,
 			);
 			let result = '';
 			if (icmsIntraLocalizado[0].percentIntra + fecpLocalized.percent < 10) {

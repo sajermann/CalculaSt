@@ -7,20 +7,20 @@ type Props = {
 	fecpDataBase: TFecp[];
 };
 
-export default function fecpCalc({
+export function fecpCalc({
 	baseIcmsSt,
 	calculaSt,
 	fecpDataBase,
 }: Props): number {
 	try {
 		if (
-			calculaSt.estadoDestino.initials === '' ||
-			calculaSt.destinoMercadoria.name === ''
+			calculaSt.estadoDestino?.initials === '' ||
+			calculaSt.destinoMercadoria?.name === ''
 		)
 			return 0;
 
 		let fecpLocalized = fecpDataBase.find(
-			fecp => fecp.state.initials === calculaSt.estadoDestino.initials,
+			fecp => fecp.state.initials === calculaSt.estadoDestino?.initials,
 		);
 
 		if (!fecpLocalized) {
@@ -32,8 +32,8 @@ export default function fecpCalc({
 		}
 
 		if (
-			calculaSt.destinoMercadoria.name === 'Revenda' ||
-			calculaSt.destinoMercadoria.name === 'Consumo'
+			calculaSt.destinoMercadoria?.name === 'Revenda' ||
+			calculaSt.destinoMercadoria?.name === 'Consumo'
 		) {
 			return baseIcmsSt * (fecpLocalized.percent / 100);
 		}

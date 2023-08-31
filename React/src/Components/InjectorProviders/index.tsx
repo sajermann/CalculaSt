@@ -38,8 +38,10 @@ export function InjectorProviders({ children }: { children: ReactNode }) {
 						})
 					}
 				>
-					<Header />
-					<main className="h-full">{children}</main>
+					<div className="flex flex-col h-full">
+						<Header />
+						<main className="h-full flex-1">{children}</main>
+					</div>
 				</QueryClientProvider>
 			</ThemeProvider>
 		</BrowserRouter>

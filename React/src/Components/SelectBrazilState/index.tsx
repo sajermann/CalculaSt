@@ -4,7 +4,7 @@ import { TAutocompleteDefault } from '~/Model/TAutocompleteDefault';
 import { TBrazilState } from '~/Model/TBrazilState';
 
 type Props = {
-	handleBrazilState: (data: TBrazilState | null) => void;
+	handleBrazilState?: (data: TBrazilState | null) => void;
 	states: TBrazilState[];
 	value: TBrazilState | null;
 	disabled?: boolean;
@@ -27,6 +27,7 @@ export function SelectBrazilState({
 	});
 
 	function handleAutoComplete(newValue: TBrazilState | null) {
+		if (!handleBrazilState) return;
 		handleBrazilState(newValue);
 	}
 

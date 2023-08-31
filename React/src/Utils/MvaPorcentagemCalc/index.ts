@@ -7,7 +7,7 @@ type Props = {
 	ncm: string;
 };
 
-export default function mvaPorcentagemCalc({
+export function mvaPorcentagemCalc({
 	calculaSt,
 	ncm,
 	mvaDataBase,
@@ -15,16 +15,16 @@ export default function mvaPorcentagemCalc({
 	if (
 		ncm === undefined ||
 		ncm === '' ||
-		calculaSt.estadoDestino.initials === ''
+		calculaSt.estadoDestino?.initials === ''
 	) {
 		return 0;
 	}
 	try {
-		if (calculaSt.destinoMercadoria.name === 'Revenda') {
+		if (calculaSt.destinoMercadoria?.name === 'Revenda') {
 			const mvaLocalizado = mvaDataBase.find(
 				mva =>
 					mva.states.find(
-						state => state.initials === calculaSt.estadoDestino.initials,
+						state => state.initials === calculaSt.estadoDestino?.initials,
 					) && mva.ncms.find(ncmHere => ncmHere.code === ncm),
 			);
 			if (!mvaLocalizado) return 0;

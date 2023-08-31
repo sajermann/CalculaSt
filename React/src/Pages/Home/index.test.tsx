@@ -2,9 +2,9 @@
  * @vitest-environment jsdom
  */
 import { render, waitFor } from '@testing-library/react';
-import { it, describe, expect } from 'vitest';
 import userEvent from '@testing-library/user-event';
-import Home from './index';
+import { describe, expect, it } from 'vitest';
+import { Home } from '.';
 
 function Mock() {
 	return <Home />;

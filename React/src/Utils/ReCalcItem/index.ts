@@ -6,14 +6,14 @@ import { TItem } from '~/Model/TItem';
 import { TMva } from '~/Model/TMva';
 import { acrescimoCalc } from '../AcrescimoCalc';
 import { baseCalculoCalc } from '../BaseCalculoCalc';
-import baseIcmsStCalc from '../BaseIcmsStCalc';
+import { baseIcmsStCalc } from '../BaseIcmsStCalc';
 import { difalCalc } from '../DifalCalc';
-import fecpCalc from '../FecpCalc';
-import icmsCalc from '../IcmsCalc';
+import { fecpCalc } from '../FecpCalc';
+import { icmsCalc } from '../IcmsCalc';
 import { icmsPorcentagemCalc } from '../IcmsPorcentagem';
 import { intraPorcentagemCalc } from '../IntraPorcentagem';
 import { ipiCalc } from '../IpiCalc';
-import mvaPorcentagemCalc from '../MvaPorcentagemCalc';
+import { mvaPorcentagemCalc } from '../MvaPorcentagemCalc';
 import { stCalc } from '../StCalc';
 import { valorTotalCalc } from '../ValorTotalCalc';
 
@@ -36,15 +36,15 @@ export function reCalcItem({
 }: Props): TItem {
 	const itemEditing = { ...item };
 	itemEditing.ipi = ipiCalc({
-		estadoDestino: calculaSt.estadoDestino.initials,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
 		total: itemEditing.total,
 		ncm: itemEditing.ncm.code,
 		ipiDataBase,
 	});
 
 	itemEditing.baseCalculo = baseCalculoCalc({
-		estadoDestino: calculaSt.estadoDestino.initials,
-		destinoMercadoria: calculaSt.destinoMercadoria.name,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
+		destinoMercadoria: calculaSt.destinoMercadoria?.name || '',
 		ipi: itemEditing.ipi,
 		total: itemEditing.total,
 		ncm: itemEditing.ncm.code,
@@ -52,7 +52,7 @@ export function reCalcItem({
 
 	itemEditing.icms = icmsCalc({
 		baseCalculo: itemEditing.baseCalculo,
-		estadoDestino: calculaSt.estadoDestino.initials,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
 		icmsDataBase,
 	});
 
@@ -78,7 +78,7 @@ export function reCalcItem({
 	});
 
 	itemEditing.difal = difalCalc({
-		estadoDestino: calculaSt.estadoDestino.initials,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
 		total: itemEditing.total,
 		ipi: itemEditing.ipi,
 		icmsDataBase,
@@ -102,12 +102,12 @@ export function reCalcItem({
 	});
 
 	itemEditing.icmsPorcentagem = icmsPorcentagemCalc({
-		estadoDestino: calculaSt.estadoDestino.initials,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
 		icmsDataBase,
 	});
 
 	itemEditing.intraPorcentagem = intraPorcentagemCalc({
-		estadoDestino: calculaSt.estadoDestino.initials,
+		estadoDestino: calculaSt.estadoDestino?.initials || '',
 		icmsDataBase,
 	});
 

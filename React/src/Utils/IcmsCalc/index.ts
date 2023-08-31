@@ -6,7 +6,7 @@ type Props = {
 	icmsDataBase: TIcms[];
 };
 
-export default function icmsCalc({
+export function icmsCalc({
 	icmsDataBase,
 	estadoDestino,
 	baseCalculo,

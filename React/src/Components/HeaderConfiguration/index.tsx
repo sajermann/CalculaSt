@@ -12,10 +12,12 @@ import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
 import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
 import { useObsDataBase } from '~/Hooks/UseObsDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
-import { TBrazilState } from '~/Model/TBrazilState';
-import { TDestinationProduct } from '~/Model/TDestinationProduct';
-import { TTypeCalc } from '~/Model/TTypeCalc';
-import { reCalcAll } from '~/Utils/ReCalcAll';
+import { handleBrazilState } from '~/Utils/HandleBrazilState';
+import { handleClienteContribuinte } from '~/Utils/HandleClienteContribuinte';
+import { handleDestinationProduct } from '~/Utils/HandleDestinationProduct';
+import { handleSimplesNacional } from '~/Utils/HandleSimplesNacional';
+import { handleTypeCalc } from '~/Utils/HandleTypeCalc';
+import { mustDisabled } from '~/Utils/MustDisabled';
 import { DeleteSimulation } from '../DeleteSimulation';
 import { SaveSimulation } from '../SaveSimulation';
 
@@ -28,144 +30,6 @@ export function HeaderConfiguration() {
 	const { mvaDataBase } = useMvaDataBase();
 	const { obsDataBase } = useObsDataBase();
 	const { translate } = useTranslation();
-	function mustDisabled(dataForVerify: string): boolean {
-		if (dataForVerify === 'DestinoMercadoria') {
-			if (calculaSt.estadoDestino && calculaSt.estadoDestino.initials === 'SP')
-				return true;
-		}
-		if (dataForVerify === 'TipoCalculo') {
-			if (
-				(calculaSt.destinoMercadoria?.name === 'Consumo' &&
-					!calculaSt.clienteContribuinte) ||
-				calculaSt.destinoMercadoria?.name === 'Revenda'
-			)
-				return true;
-		}
-		if (dataForVerify === 'ClienteContribuinte') {
-			if (calculaSt.destinoMercadoria?.name === 'Revenda') return true;
-		}
-
-		if (dataForVerify === 'SimplesNacional') {
-			if (calculaSt.destinoMercadoria?.name === 'Consumo') return true;
-		}
-
-		if (dataForVerify === 'SimplesNacional') {
-			if (
-				calculaSt.destinoMercadoria?.name === 'Consumo' ||
-				calculaSt.estadoDestino?.initials === 'SP'
-			)
-				return true;
-		}
-
-		return false;
-	}
-
-	function handleBrazilStateOrigin(e: TBrazilState | null) {
-		const calc = { ...calculaSt };
-		calc.estadoOrigem = e;
-
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
-
-	function handleBrazilStateDestiny(e: TBrazilState | null) {
-		const calc = { ...calculaSt };
-		calc.estadoDestino = e;
-
-		if (e?.initials === 'SP') {
-			calc.destinoMercadoria = { id: '2', name: 'Revenda' };
-			calc.clienteContribuinte = true;
-			calc.tipoCalculo = { id: '4', name: 'Não Aplicado' };
-		}
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
-
-	function handleDestinationProduct(event: TDestinationProduct | null) {
-		console.log({ event });
-		if (!event) return;
-		const calc = { ...calculaSt };
-		calc.destinoMercadoria = { ...event };
-		if (event.name === 'Consumo') {
-			calc.simplesNacional = false;
-		}
-		if (event.name === 'Revenda') {
-			calc.clienteContribuinte = true;
-			calc.tipoCalculo = { id: '4', name: 'Não Aplicado' };
-		}
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
-
-	function handleTypeCalc(e: TTypeCalc | null) {
-		const calc = { ...calculaSt };
-		calc.tipoCalculo = e;
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
-
-	function handleClienteContribuinte(data: boolean) {
-		const calc = { ...calculaSt };
-		calc.clienteContribuinte = data;
-		if (!data) {
-			calc.destinoMercadoria = { id: '1', name: 'Consumo' };
-			calc.tipoCalculo = { id: '4', name: 'Não Aplicado' };
-		}
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
-
-	function handleSimplesNacional(data: boolean) {
-		const calc = { ...calculaSt };
-		calc.simplesNacional = data;
-		if (!data) {
-			calc.destinoMercadoria = { id: '2', name: 'Revenda' };
-		}
-		reCalcAll({
-			calculaStForRecalcAll: calc,
-			fecpDataBase,
-			icmsDataBase,
-			ipiDataBase,
-			mvaDataBase,
-			obsDataBase,
-			setCalculaSt,
-		});
-	}
 
 	return (
 		<Grid container spacing={1}>
@@ -184,8 +48,7 @@ export function HeaderConfiguration() {
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectBrazilState
 					states={brazilStatesDataBase}
-					label={translate('FROM')}
-					handleBrazilState={handleBrazilStateOrigin}
+					label="De"
 					value={calculaSt.estadoOrigem}
 					disabled
 				/>
@@ -195,40 +58,107 @@ export function HeaderConfiguration() {
 				<SelectBrazilState
 					states={brazilStatesDataBase}
 					value={calculaSt.estadoDestino}
-					label={translate('TO')}
-					handleBrazilState={handleBrazilStateDestiny}
+					label="Para"
+					handleBrazilState={event =>
+						handleBrazilState({
+							calculaSt,
+							event,
+							fecpDataBase,
+							icmsDataBase,
+							ipiDataBase,
+							mvaDataBase,
+							obsDataBase,
+							setCalculaSt,
+						})
+					}
 				/>
 			</Grid>
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectDestinationProduct
-					handleDestinationProduct={handleDestinationProduct}
+					handleDestinationProduct={event =>
+						handleDestinationProduct({
+							calculaSt,
+							event,
+							fecpDataBase,
+							icmsDataBase,
+							ipiDataBase,
+							mvaDataBase,
+							obsDataBase,
+							setCalculaSt,
+						})
+					}
 					value={calculaSt.destinoMercadoria}
-					disabled={mustDisabled('DestinoMercadoria')}
+					disabled={mustDisabled({
+						calculaSt,
+						dataForVerify: 'destinoMercadoria',
+					})}
 				/>
 			</Grid>
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectTypeCalc
-					handleTypeCalc={handleTypeCalc}
+					handleTypeCalc={event =>
+						handleTypeCalc({
+							calculaSt,
+							event,
+							fecpDataBase,
+							icmsDataBase,
+							ipiDataBase,
+							mvaDataBase,
+							obsDataBase,
+							setCalculaSt,
+						})
+					}
 					value={calculaSt.tipoCalculo}
-					disabled={mustDisabled('TipoCalculo')}
+					disabled={mustDisabled({
+						calculaSt,
+						dataForVerify: 'tipoCalculo',
+					})}
 				/>
 			</Grid>
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectTrueOrFalse
-					disabled={mustDisabled('ClienteContribuinte')}
+					disabled={mustDisabled({
+						calculaSt,
+						dataForVerify: 'clienteContribuinte',
+					})}
 					value={calculaSt.clienteContribuinte}
-					handleTrueOrFalse={handleClienteContribuinte}
+					handleTrueOrFalse={event =>
+						handleClienteContribuinte({
+							calculaSt,
+							event,
+							fecpDataBase,
+							icmsDataBase,
+							ipiDataBase,
+							mvaDataBase,
+							obsDataBase,
+							setCalculaSt,
+						})
+					}
 					label="Cliente Contribuinte"
 				/>
 			</Grid>
 
 			<Grid item xs={12} sm={6} md={6} lg={2} xl={2}>
 				<SelectTrueOrFalse
-					disabled={mustDisabled('SimplesNacional')}
-					handleTrueOrFalse={handleSimplesNacional}
+					disabled={mustDisabled({
+						calculaSt,
+						dataForVerify: 'simplesNacional',
+					})}
+					handleTrueOrFalse={event =>
+						handleSimplesNacional({
+							calculaSt,
+							event,
+							fecpDataBase,
+							icmsDataBase,
+							ipiDataBase,
+							mvaDataBase,
+							obsDataBase,
+							setCalculaSt,
+						})
+					}
 					label="Simples Nacional"
 					value={calculaSt.simplesNacional}
 				/>
