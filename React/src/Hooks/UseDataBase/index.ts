@@ -15,6 +15,8 @@ export function useDataBase() {
 	const { obsDataBase } = useObsDataBase();
 	const { brazilStatesDataBase } = useBrazilStatesDataBase();
 
+	console.log({ brazilStatesDataBase });
+
 	return {
 		fecpDataBase,
 		icmsDataBase,

@@ -1,52 +1,43 @@
 /**
  * @vitest-environment jsdom
  */
-import { render, waitFor } from '@testing-library/react';
+import { fireEvent, render, renderHook } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+import { InjectorProviders } from '~/Components/InjectorProviders';
+import * as useDataBase from '~/Hooks/UseDataBase';
 import { Home } from '.';
 
 function Mock() {
-	return <Home />;
+	return (
+		<InjectorProviders>
+			<Home />
+		</InjectorProviders>
+	);
 }
 
 describe('Pages/Home', () => {
-	it(`should render list items`, () => {
-		const { getByText } = render(<Mock />);
-		expect(getByText('Bruno')).toBeInTheDocument();
-		expect(getByText('Marcia')).toBeInTheDocument();
-	});
-
 	it(`should add new item to the list`, async () => {
-		const { getByText, debug, getByTestId, findByText } = render(<Mock />);
-		const inputElement = getByTestId('inputNewItem');
-		const addButton = getByText('ADD');
-		debug();
-		await userEvent.type(inputElement, 'Dereck');
-		await userEvent.click(addButton);
-		expect(await findByText('Dereck')).toBeInTheDocument();
-	});
+		const { getByText, getAllByLabelText } = render(<Mock />);
+		vi.spyOn(useDataBase, 'useDataBase').mockImplementation(() => ({
+			fecpDataBase: [],
+			icmsDataBase: [],
+			ipiDataBase: [],
+			mvaDataBase: [],
+			ncmDataBase: [],
+			obsDataBase: [],
+			brazilStatesDataBase: [{ id: 'T', initials: 'TE', name: 'Test' }],
+		}));
+		expect(getByText('Dashboard')).toBeInTheDocument();
 
-	it(`should remove item to the list`, async () => {
-		const { getAllByText, debug, queryByText } = render(<Mock />);
-		const removeButton = getAllByText('REMOVE');
-		debug();
-		await userEvent.click(removeButton[0]);
-		await waitFor(() => {
-			expect(queryByText('Bruno')).not.toBeInTheDocument();
-		});
-	});
-
-	it(`should not add repeat item`, async () => {
-		const { getByText, debug, getByTestId, findAllByText } = render(<Mock />);
-		const inputElement = getByTestId('inputNewItem');
-		const addButton = getByText('ADD');
-		debug();
-		await userEvent.type(inputElement, 'Bruno');
-		await userEvent.click(addButton);
-		await waitFor(async () => {
-			const items = await findAllByText('Bruno');
-			expect(items.length).toBe(1);
-		});
+		renderHook(() => useDataBase.useDataBase(), { wrapper: Mock });
+		const autocomplete = getAllByLabelText('Estado')[0];
+		const input = autocomplete.closest('input')!;
+		await autocomplete.focus();
+		await userEvent.type(input, 'Tes');
+		await fireEvent.keyDown(input, { key: 'ArrowDown' });
+		await fireEvent.keyDown(input, { key: 'Enter' });
+		await fireEvent.keyDown(autocomplete, { key: 'ArrowDown' });
+		await fireEvent.keyDown(autocomplete, { key: 'Enter' });
 	});
 });

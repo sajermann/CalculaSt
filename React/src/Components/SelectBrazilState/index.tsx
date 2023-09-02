@@ -49,6 +49,7 @@ export function SelectBrazilState({
 			{...defaultProps}
 			value={value}
 			onChange={(_, newValue) => {
+				console.log('teta', { newValue });
 				handleAutoComplete(newValue);
 			}}
 			renderInput={params => (
