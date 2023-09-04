@@ -54,6 +54,7 @@ export function ToggleDarkMode() {
 	}));
 
 	async function handleSwitch() {
+		console.log('Aqui');
 		await delay(100);
 		setIsDarkMode(!isDarkMode);
 	}

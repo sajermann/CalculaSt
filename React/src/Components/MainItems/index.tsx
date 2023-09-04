@@ -159,6 +159,8 @@ export function MainItems({ isLoading }: Props) {
 		[],
 	);
 
+	console.log({ calculaSt });
+
 	return (
 		<MaterialReactTable
 			getRowId={row => row.id}
