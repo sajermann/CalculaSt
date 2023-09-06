@@ -32,13 +32,13 @@ export function stCalc({
 			return 0;
 		}
 		const aliquotasLocalizado = icmsDataBase.find(
-			el => el.state.initials === calculaSt.estadoDestino.initials,
+			el => el.state.initials === calculaSt.estadoDestino?.initials,
 		);
 		if (!aliquotasLocalizado) return 0;
 		const porcentagemIntraLocalizado = aliquotasLocalizado.percentIntra;
 		const porcentagemIcmsLocalizado = aliquotasLocalizado.percent;
 		if (
-			calculaSt.destinoMercadoria.name === 'Revenda' &&
+			calculaSt.destinoMercadoria?.name === 'Revenda' &&
 			!calculaSt.simplesNacional
 		) {
 			if (baseIcmsSt === 0) {
@@ -48,34 +48,34 @@ export function stCalc({
 		}
 
 		if (
-			calculaSt.destinoMercadoria.name === 'Revenda' &&
+			calculaSt.destinoMercadoria?.name === 'Revenda' &&
 			calculaSt.simplesNacional &&
-			calculaSt.estadoDestino.initials === 'PR'
+			calculaSt.estadoDestino?.initials === 'PR'
 		) {
 			return baseIcmsSt * (porcentagemIntraLocalizado / 100) - icms;
 		}
 		if (
-			calculaSt.destinoMercadoria.name === 'Consumo' &&
-			calculaSt.tipoCalculo.name === 'Fora' &&
+			calculaSt.destinoMercadoria?.name === 'Consumo' &&
+			calculaSt.tipoCalculo?.name === 'Fora' &&
 			calculaSt.clienteContribuinte
 		) {
 			return difalCalc({
 				icmsDataBase,
-				estadoDestino: calculaSt.estadoDestino.initials,
+				estadoDestino: calculaSt.estadoDestino?.initials || '',
 				total,
 				ipi,
 			});
 		}
 		if (
-			calculaSt.destinoMercadoria.name === 'Consumo' &&
-			calculaSt.tipoCalculo.name === 'Dentro' &&
+			calculaSt.destinoMercadoria?.name === 'Consumo' &&
+			calculaSt.tipoCalculo?.name === 'Dentro' &&
 			calculaSt.clienteContribuinte
 		) {
 			return baseIcmsSt * (porcentagemIntraLocalizado / 100) - icms;
 		}
 		if (
-			calculaSt.destinoMercadoria.name === 'Consumo' &&
-			calculaSt.tipoCalculo.name === 'BS Dupla' &&
+			calculaSt.destinoMercadoria?.name === 'Consumo' &&
+			calculaSt.tipoCalculo?.name === 'BS Dupla' &&
 			calculaSt.clienteContribuinte
 		) {
 			return (

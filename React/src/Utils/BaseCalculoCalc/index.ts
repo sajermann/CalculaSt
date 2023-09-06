@@ -13,7 +13,7 @@ export function baseCalculoCalc({
 	ipi,
 	ncm,
 }: Props): number {
-	if (total === 0 || estadoDestino === '') return 0;
+	if (!total || !estadoDestino) return 0;
 	if (
 		destinoMercadoria === 'Revenda' &&
 		estadoDestino === 'SP' &&
@@ -22,7 +22,7 @@ export function baseCalculoCalc({
 		return total * 0.6667;
 	if (destinoMercadoria === 'Revenda' || estadoDestino === 'AM') return total;
 	if (destinoMercadoria === 'Consumo') {
-		if (total === undefined || ipi === undefined) return 0;
+		if (ipi === undefined) return 0;
 		return total + ipi;
 	}
 	console.log('Erro na função Base Calculo Calc');

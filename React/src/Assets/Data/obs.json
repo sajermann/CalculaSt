@@ -1,167 +1,1462 @@
 [
-  { "estado": "AC", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AC", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AC", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AC", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AC", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AC", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AL", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F28", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F28", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F28", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F28", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F28", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AP", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "920", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "920", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "943", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "922", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "922", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "AM", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "527", "tesCIpi": "527", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "BA", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "CE", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F34", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F34", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F34", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F34", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F34", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "DF", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "ES", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.", "obs": "Decreto 7806 de 20/2/13 e Art. I Inciso LV do Art. 8 do anexo II do Decreto 4852/97. Empresa Faz Parte do Simples Nacional do EPP e Me do Estado de Goias.", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "GO", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F26", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F26", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F26", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F26", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F26", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MA", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F16", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F16", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F16", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F16", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F16", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MT", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MS", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F05", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F05", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F05", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F05", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F05", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "MG", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "005", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PA", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PB", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F37", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F37", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F37", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F37", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.", "obs": "Operação destinada a contribuinte enquadrado no Simples Nacional - MVA reduzida - Art. 15 do Anexo X do RICMS/PR.", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F85", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PR", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "005", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F23", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F23", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F23", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F23", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F23", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PE", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "005", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "PI", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.", "obs": "Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F52", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.", "obs": "Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F52", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "000202312", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.", "obs": "Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F52", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.", "obs": "Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F52", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.", "obs": "Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F52", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RJ", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal Fundo Estadual de Combate a Pobreza (FECP)", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RN", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F07", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F07", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F07", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F07", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F07", "tesSIpi": "926", "tesCIpi": "924", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RS", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "005", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RO", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "RR", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
+	{
+		"estado": "AC",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AC",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AC",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AC",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AC",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AC",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "AL",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AL",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AL",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AL",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AL",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AL",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "AP",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "AP",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "AP",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "AP",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "AP",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 113/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "AP",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "AM",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AM",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AM",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AM",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AM",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "AM",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "BA",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "BA",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "BA",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "BA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "BA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "BA",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "CE",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "CE",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "CE",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "CE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "CE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "CE",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "DF",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "DF",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "DF",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "DF",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "DF",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 22/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "DF",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "ES",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "ES",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "ES",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "ES",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "ES",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "ES",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "GO",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "GO",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "GO",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "GO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "GO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 83/2011.",
+		"obs": "Decreto 7806 de 20/2/13 e Art. I Inciso LV do Art. 8 do anexo II do Decreto 4852/97. Empresa Faz Parte do Simples Nacional do EPP e Me do Estado de Goias."
+	},
+	{
+		"estado": "GO",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "MA",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "MA",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "MA",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "MA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "MA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 94/2011.",
+		"obs": ""
+	},
+	{
+		"estado": "MA",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "MT",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.",
+		"obs": ""
+	},
+	{
+		"estado": "MT",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.",
+		"obs": ""
+	},
+	{
+		"estado": "MT",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.",
+		"obs": ""
+	},
+	{
+		"estado": "MT",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.",
+		"obs": ""
+	},
+	{
+		"estado": "MT",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 11/2008.",
+		"obs": ""
+	},
+	{
+		"estado": "MT",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "MS",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "MS",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "MS",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "MS",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "MS",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "MS",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "MG",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "MG",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "MG",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "MG",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "MG",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 39/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "MG",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "PA",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PA",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PA",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PA",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PA",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "PB",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PB",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PB",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PB",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PB",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PB",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "PR",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.",
+		"obs": ""
+	},
+	{
+		"estado": "PR",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.",
+		"obs": ""
+	},
+	{
+		"estado": "PR",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.",
+		"obs": ""
+	},
+	{
+		"estado": "PR",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.",
+		"obs": ""
+	},
+	{
+		"estado": "PR",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 26/2013.",
+		"obs": "Operação destinada a contribuinte enquadrado no Simples Nacional - MVA reduzida - Art. 15 do Anexo X do RICMS/PR."
+	},
+	{
+		"estado": "PR",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "PE",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.",
+		"obs": ""
+	},
+	{
+		"estado": "PE",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.",
+		"obs": ""
+	},
+	{
+		"estado": "PE",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.",
+		"obs": ""
+	},
+	{
+		"estado": "PE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.",
+		"obs": ""
+	},
+	{
+		"estado": "PE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 132/2010.",
+		"obs": ""
+	},
+	{
+		"estado": "PE",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "PI",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PI",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PI",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PI",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PI",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "PI",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.",
+		"obs": "Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.",
+		"obs": "Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.",
+		"obs": "Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.",
+		"obs": "Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 33/2014.",
+		"obs": "Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RJ",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal Fundo Estadual de Combate a Pobreza (FECP)"
+	},
+	{
+		"estado": "RN",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RN",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RN",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RN",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RN",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RN",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "RS",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "RS",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "RS",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "RS",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "RS",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 91/2009.",
+		"obs": ""
+	},
+	{
+		"estado": "RS",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "RO",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RO",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RO",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RO",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "RR",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RR",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RR",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RR",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RR",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "RR",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
 
-  { "estado": "SC", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F33", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SC", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F33", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SC", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F33", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SC", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "Sem Protocolo entre SP e SC.", "tipoClienteSiga": "", "grupoClienteSiga": "", "formula": "", "tesSIpi": "517", "tesCIpi": "501", "cfop": "6101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SC", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "Sem Protocolo entre SP e SC", "tipoClienteSiga": "", "grupoClienteSiga": "", "formula": "", "tesSIpi": "517", "tesCIpi": "501", "cfop": "6101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SC", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "005", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
+	{
+		"estado": "SC",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SC",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SC",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 117/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SC",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": "Sem Protocolo entre SP e SC."
+	},
+	{
+		"estado": "SC",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": "Sem Protocolo entre SP e SC"
+	},
+	{
+		"estado": "SC",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
 
-  { "estado": "SP", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SP", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SP", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SP", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "Subst.Trib.Art.313-Z17 Ricms/Sp Mva 41% e 97%. Destinatário deverá c/ relação as operações c/ mercadoria ou prestações de serviço recebidas c/ imp.retido,escriturar o documento fiscal nos termos do art.278 do RICMS.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F03", "tesSIpi": "915/946 (CU Nú)", "tesCIpi": "918", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SP", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "915", "tesCIpi": "918", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SP", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "517", "tesCIpi": "502", "cfop": "5101", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F27", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F27", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "F27", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "F27", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "F27", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "SE", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Consumo", "tipo": "Fora", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Consumo", "tipo": "Dentro", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "920", "tesCIpi": "919", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Consumo", "tipo": "BS Dupla", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "943", "tesCIpi": "942", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": false, "protocolo": "", "obs": "", "tipoClienteSiga": "Solidário", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Revenda", "tipo": "Não Aplicado", "contribuinte": true, "simplesNacional": true, "protocolo": "", "obs": "", "tipoClienteSiga": "Revendedor", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "922", "tesCIpi": "921", "cfop": "6401", "danfeConferida": "", "complementoObs": "" },
-  { "estado": "TO", "destino": "Consumo", "tipo": "Não Aplicado", "contribuinte": false, "simplesNacional": false, "protocolo": "Valor do ICMS Interestadual para a UF de destino", "obs": "100% Difal", "tipoClienteSiga": "Cons. Final", "grupoClienteSiga": "003", "formula": "", "tesSIpi": "528", "tesCIpi": "638", "cfop": "6107", "danfeConferida": "", "complementoObs": "" }
-
+	{
+		"estado": "SP",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "SP",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "SP",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "SP",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "Subst.Trib.Art.313-Z17 Ricms/Sp Mva 41% e 97%. Destinatário deverá c/ relação as operações c/ mercadoria ou prestações de serviço recebidas c/ imp.retido,escriturar o documento fiscal nos termos do art.278 do RICMS.",
+		"obs": ""
+	},
+	{
+		"estado": "SP",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "SP",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "SE",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SE",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SE",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SE",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "ICMS retido por substituicao tributaria conforme protocolo 34/2012.",
+		"obs": ""
+	},
+	{
+		"estado": "SE",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	},
+	{
+		"estado": "TO",
+		"destino": "Consumo",
+		"tipo": "Fora",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "TO",
+		"destino": "Consumo",
+		"tipo": "Dentro",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "TO",
+		"destino": "Consumo",
+		"tipo": "BS Dupla",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "TO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": false,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "TO",
+		"destino": "Revenda",
+		"tipo": "Não Aplicado",
+		"contribuinte": true,
+		"simplesNacional": true,
+		"protocolo": "",
+		"obs": ""
+	},
+	{
+		"estado": "TO",
+		"destino": "Consumo",
+		"tipo": "Não Aplicado",
+		"contribuinte": false,
+		"simplesNacional": false,
+		"protocolo": "Valor do ICMS Interestadual para a UF de destino",
+		"obs": "100% Difal"
+	}
 ]

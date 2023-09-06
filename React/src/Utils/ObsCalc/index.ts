@@ -9,6 +9,7 @@ type Props = {
 };
 
 export function obsCalc({ calculaSt, obsDataBase }: Props): string {
+	console.log({ obsDataBase });
 	let difalTemp = 0;
 	for (let i = 0; i < calculaSt.itens.length; i += 1) {
 		difalTemp = calculaSt.itens[i].difal + difalTemp;
@@ -57,30 +58,6 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 		}
 		if (!calculaSt.clienteContribuinte) {
 			obsMontada = `${obsMontada}. Difal: R$ ${difalTempFormat}`;
-		}
-		if (obsLocalizada[0].tipoClienteSiga !== '') {
-			obsMontada = `${obsMontada}. Tipo Cliente: ${obsLocalizada[0].tipoClienteSiga}`;
-		}
-		if (obsLocalizada[0].grupoClienteSiga !== '') {
-			obsMontada = `${obsMontada}. Grupo Tributário: ${obsLocalizada[0].grupoClienteSiga}`;
-		}
-		if (obsLocalizada[0].formula !== '') {
-			obsMontada = `${obsMontada}. Fórmula: ${obsLocalizada[0].formula}`;
-		}
-		if (obsLocalizada[0].tesSIpi !== '') {
-			obsMontada = `${obsMontada},. Tes Sem Ipi: ${obsLocalizada[0].tesSIpi}`;
-		}
-		if (obsLocalizada[0].tesCIpi !== '') {
-			obsMontada = `${obsMontada}. Tes Com Ipi: ${obsLocalizada[0].tesCIpi}`;
-		}
-		if (obsLocalizada[0].cfop !== '') {
-			obsMontada = `${obsMontada}. CFOP: ${obsLocalizada[0].cfop}`;
-		}
-		if (obsLocalizada[0].danfeConferida !== '') {
-			obsMontada = `${obsMontada}. Danfe Conferida: ${obsLocalizada[0].danfeConferida}`;
-		}
-		if (obsLocalizada[0].complementoObs !== '') {
-			obsMontada = `${obsMontada}. ${obsLocalizada[0].complementoObs}`;
 		}
 	} catch (e) {
 		console.log({ e });

@@ -25,12 +25,7 @@ export function baseIcmsStCalc({
 	fecpDataBase,
 }: Props) {
 	try {
-		if (
-			ncm === '' ||
-			calculaSt.estadoDestino?.name === '' ||
-			calculaSt.estadoDestino === undefined
-		)
-			return 0;
+		if (ncm === '' || !calculaSt.estadoDestino?.name) return 0;
 
 		if (calculaSt.destinoMercadoria?.name === 'Revenda') {
 			const mvaLocalizado = mvaDataBase.find(
