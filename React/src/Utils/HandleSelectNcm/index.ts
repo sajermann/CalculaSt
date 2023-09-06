@@ -15,7 +15,6 @@ type Props = {
 	icmsDataBase: TIcms[];
 	ipiDataBase: TIpi[];
 	mvaDataBase: TMva[];
-	ncmDataBase: TNcm[];
 	fecpDataBase: TFecp[];
 };
 export function handleSelectNcm({

@@ -12,7 +12,6 @@ export function handleSaveItem({
 	setSuccess,
 	setLoading,
 	onFinalize,
-
 	handleResetInfos,
 	setIsOpen,
 }: Props) {

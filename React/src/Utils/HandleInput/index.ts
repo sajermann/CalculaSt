@@ -8,6 +8,8 @@ import { TMva } from '~/Model/TMva';
 import { TNcm } from '~/Model/TNcm';
 import { reCalcItem } from '../ReCalcItem';
 
+type TInputName = 'quantity' | 'price' | 'description';
+
 type Props = {
 	item: TItem;
 	setItem: (data: TItem) => void;
@@ -32,23 +34,22 @@ export function handleInput({
 	const { value } = eventInput.target;
 	const { name } = eventInput.target;
 	const itemEditing = { ...item };
-	switch (name) {
-		case 'quantity':
-			itemEditing.quantity = parseFloat(value) || 0;
-			break;
-		case 'price':
-			itemEditing.price = parseFloat(value) || 0;
-			break;
-		case 'description':
-			itemEditing.ncm.description = value;
-			break;
-		default:
-			console.log('Nothing');
-	}
-	itemEditing.total = itemEditing.price * itemEditing.quantity;
-	// setItem(itemEditing);
-	// calcItem(itemEditing);
 
+	const config = {
+		quantity: () => {
+			itemEditing.quantity = parseFloat(value) || 0;
+		},
+		price: () => {
+			itemEditing.price = parseFloat(value) || 0;
+		},
+		description: () => {
+			itemEditing.ncm.description = value;
+		},
+	};
+
+	config[name as TInputName]();
+
+	itemEditing.total = itemEditing.price * itemEditing.quantity;
 	const itemForSave = reCalcItem({
 		calculaSt,
 		item: itemEditing,
