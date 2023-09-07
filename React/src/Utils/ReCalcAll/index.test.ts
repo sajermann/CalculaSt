@@ -2,10 +2,9 @@
  * @vitest-environment jsdom
  */
 import { describe, it } from 'vitest';
-import { fecpCalc } from '.';
 import fecpDb from '../../Assets/Data/fecps.json';
 
-describe('Utils/fecpCalc', () => {
+describe('Utils/reCalcAll', () => {
 	it(`should return true`, async () => {
 		const mock = {
 			estadoOrigem: {
