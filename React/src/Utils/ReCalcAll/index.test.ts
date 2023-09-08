@@ -2,6 +2,7 @@
  * @vitest-environment jsdom
  */
 import { describe, it } from 'vitest';
+import { reCalcAll } from '.';
 import fecpDb from '../../Assets/Data/fecps.json';
 
 describe('Utils/reCalcAll', () => {
@@ -78,8 +79,7 @@ describe('Utils/reCalcAll', () => {
 			obs: 'Protocolo do estado: ICMS retido por substituicao tributaria conforme protocolo 33/2014. Observação: Fundo Estadual de Combate a Pobreza (FECP) R$ 3,10',
 		};
 
-		const result = fecpCalc({
-			baseIcmsSt: 100,
+		const result = reCalcAll({
 			calculaSt: mock,
 			fecpDataBase: fecpDb,
 		});
