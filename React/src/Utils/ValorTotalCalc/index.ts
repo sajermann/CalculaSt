@@ -16,7 +16,7 @@ export function valorTotalCalc({
 	calculaSt,
 }: Props): number {
 	if (
-		calculaSt.estadoDestino.initials === 'RJ' &&
+		calculaSt.estadoDestino?.initials === 'RJ' &&
 		calculaSt.clienteContribuinte
 	) {
 		return total + ipi + st + fecp;

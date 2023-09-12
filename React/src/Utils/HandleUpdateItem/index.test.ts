@@ -1,12 +1,13 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it } from 'vitest';
-import { fecpCalc } from '.';
-import fecpDb from '../../Assets/Data/fecps.json';
+import { describe, it, vi } from 'vitest';
+import * as reCalcHeader from '~/Utils/ReCalcHeader';
+import { handleUpdateItem } from '.';
 
-describe('Utils/fecpCalc', () => {
-	it(`should return true`, async () => {
+describe('Utils/handleUpdateItem', () => {
+	it(`should test edit`, async () => {
+		const mockRecalcHeader = vi.spyOn(reCalcHeader, 'reCalcHeader');
 		const mock = {
 			estadoOrigem: {
 				id: '',
@@ -79,11 +80,13 @@ describe('Utils/fecpCalc', () => {
 			obs: 'Protocolo do estado: ICMS retido por substituicao tributaria conforme protocolo 33/2014. Observação: Fundo Estadual de Combate a Pobreza (FECP) R$ 3,10',
 		};
 
-		const result = fecpCalc({
-			baseIcmsSt: 100,
+		handleUpdateItem({
 			calculaSt: mock,
-			fecpDataBase: fecpDb,
+			item: mock.itens[0],
+			mode: 'edit',
+			obsDataBase: [],
+			setCalculaSt: vi.fn(),
 		});
-		expect(result).toBe(2);
+		expect(mockRecalcHeader).toBeCalled();
 	});
 });

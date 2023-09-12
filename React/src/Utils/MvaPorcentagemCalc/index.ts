@@ -12,25 +12,23 @@ export function mvaPorcentagemCalc({
 	ncm,
 	mvaDataBase,
 }: Props): number {
-	if (
-		ncm === undefined ||
-		ncm === '' ||
-		calculaSt.estadoDestino?.initials === ''
-	) {
-		return 0;
-	}
 	try {
-		if (calculaSt.destinoMercadoria?.name === 'Revenda') {
-			const mvaLocalizado = mvaDataBase.find(
-				mva =>
-					mva.states.find(
-						state => state.initials === calculaSt.estadoDestino?.initials,
-					) && mva.ncms.find(ncmHere => ncmHere.code === ncm),
-			);
-			if (!mvaLocalizado) return 0;
-			return mvaLocalizado.percent;
+		if (
+			!ncm ||
+			!calculaSt.estadoDestino?.initials ||
+			calculaSt.destinoMercadoria?.name !== 'Revenda'
+		) {
+			return 0;
 		}
-		return 0;
+
+		const mvaLocalizado = mvaDataBase.find(
+			mva =>
+				mva.states.find(
+					state => state.initials === calculaSt.estadoDestino?.initials,
+				) && mva.ncms.find(ncmHere => ncmHere.code === ncm),
+		);
+		if (!mvaLocalizado) return 0;
+		return mvaLocalizado.percent;
 	} catch (e) {
 		console.log({ e });
 		return 0;

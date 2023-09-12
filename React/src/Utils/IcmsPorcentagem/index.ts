@@ -16,7 +16,7 @@ export function icmsPorcentagemCalc({
 		if (!icmsLocalizado) return 0;
 		return icmsLocalizado.percentIntra;
 	} catch (e) {
-		console.log({ e });
+		console.error({ e });
 		return 0;
 	}
 }

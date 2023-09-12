@@ -11,14 +11,15 @@ export function icmsCalc({
 	estadoDestino,
 	baseCalculo,
 }: Props): number {
-	const icmsLocalizado = icmsDataBase.find(
-		icms => icms.state.initials === estadoDestino,
-	);
 	try {
+		const icmsLocalizado = icmsDataBase.find(
+			icms => icms.state.initials === estadoDestino,
+		);
+
 		if (!icmsLocalizado) return 0;
 		return baseCalculo * (icmsLocalizado.percent / 100);
 	} catch (e) {
-		console.log({ e });
+		console.error({ e });
 		return 0;
 	}
 }

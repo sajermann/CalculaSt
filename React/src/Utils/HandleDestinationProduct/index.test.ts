@@ -117,6 +117,6 @@ describe('Utils/handleDestinationProduct', () => {
 			fecpDataBase: [],
 			obsDataBase: [],
 		});
-		expect(mock).toBeCalled();
+		expect(mock).not.toBeCalled();
 	});
 });

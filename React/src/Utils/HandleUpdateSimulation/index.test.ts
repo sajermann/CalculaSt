@@ -1,11 +1,10 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it } from 'vitest';
-import { fecpCalc } from '.';
-import fecpDb from '../../Assets/Data/fecps.json';
+import { describe, it, vi } from 'vitest';
+import { handleUpdateSimulation } from '.';
 
-describe('Utils/fecpCalc', () => {
+describe('Utils/handleUpdateSimulation', () => {
 	it(`should return true`, async () => {
 		const mock = {
 			estadoOrigem: {
@@ -78,12 +77,11 @@ describe('Utils/fecpCalc', () => {
 			],
 			obs: 'Protocolo do estado: ICMS retido por substituicao tributaria conforme protocolo 33/2014. Observação: Fundo Estadual de Combate a Pobreza (FECP) R$ 3,10',
 		};
-
-		const result = fecpCalc({
-			baseIcmsSt: 100,
+		const mockUpdateSimulation = vi.fn();
+		handleUpdateSimulation({
 			calculaSt: mock,
-			fecpDataBase: fecpDb,
+			updateSimulation: mockUpdateSimulation,
 		});
-		expect(result).toBe(2);
+		expect(mockUpdateSimulation).toBeCalledWith(mock);
 	});
 });

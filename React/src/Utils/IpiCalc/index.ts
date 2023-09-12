@@ -13,9 +13,7 @@ export function ipiCalc({
 	total,
 	ipiDataBase,
 }: Props): number {
-	if (total === 0 || ncm === '' || estadoDestino === '') {
-		return 0;
-	}
+	if (total === 0 || ncm === '' || estadoDestino === '') return 0;
 	try {
 		if (estadoDestino === 'AM') return 0;
 		const ipiLocalizado = ipiDataBase.filter(
@@ -24,7 +22,7 @@ export function ipiCalc({
 		if (ipiLocalizado.length === 0) return 0;
 		return total * (ipiLocalizado[0].percent / 100);
 	} catch (e) {
-		console.log('Erro no calculo de Ipi:', { e });
+		console.error('Erro no calculo de Ipi:', { e });
 		return 0;
 	}
 }

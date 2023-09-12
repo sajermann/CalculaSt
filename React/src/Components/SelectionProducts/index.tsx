@@ -74,7 +74,11 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 	return (
 		<>
 			<InputAdornment position="end">
-				<IconButton aria-label="search ncm" onClick={() => setOpen(true)}>
+				<IconButton
+					data-testid="open-dialog-search-ncm"
+					aria-label="search ncm"
+					onClick={() => setOpen(true)}
+				>
 					<SearchIcon />
 				</IconButton>
 			</InputAdornment>
