@@ -36,7 +36,8 @@ export function CreateItem() {
 			<Button
 				variant="contained"
 				color="primary"
-				aria-label="add"
+				aria-label="create item button"
+				data-testid="create-item-button"
 				disabled={
 					!calculaSt.destinoMercadoria ||
 					!calculaSt.estadoDestino ||
@@ -72,7 +73,6 @@ export function CreateItem() {
 						icmsDataBase,
 						ipiDataBase,
 						mvaDataBase,
-						ncmDataBase,
 					})
 				}
 				isLoading={isLoading}

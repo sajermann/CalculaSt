@@ -44,7 +44,11 @@ export function UpdateItem({ itemForEditId }: Props) {
 
 	return (
 		<div className="flex justify-center">
-			<IconButton aria-label="delete" onClick={() => setIsOpen(true)}>
+			<IconButton
+				data-testid="update-item-button"
+				aria-label="update item button"
+				onClick={() => setIsOpen(true)}
+			>
 				<VisibilityIcon fontSize="small" />
 			</IconButton>
 
@@ -72,7 +76,6 @@ export function UpdateItem({ itemForEditId }: Props) {
 						icmsDataBase,
 						ipiDataBase,
 						mvaDataBase,
-						ncmDataBase,
 					})
 				}
 				isLoading={isLoadingUpdate}

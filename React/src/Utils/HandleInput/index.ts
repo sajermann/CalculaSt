@@ -35,6 +35,8 @@ export function handleInput({
 	const { name } = eventInput.target;
 	const itemEditing = { ...item };
 
+	console.log({ value, name });
+
 	const config = {
 		quantity: () => {
 			itemEditing.quantity = parseFloat(value) || 0;

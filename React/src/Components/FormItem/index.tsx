@@ -20,7 +20,7 @@ import {
 } from '@mui/material';
 import { green } from '@mui/material/colors';
 import { TransitionProps } from '@mui/material/transitions';
-import { ChangeEvent, forwardRef } from 'react';
+import { ChangeEvent, forwardRef, useEffect } from 'react';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TItem } from '~/Model/TItem';
 import { TNcm } from '~/Model/TNcm';
@@ -71,6 +71,10 @@ export function FormItem({
 }: Props) {
 	const { translate } = useTranslation();
 
+	useEffect(() => {
+		console.log({ isOpen });
+	}, [isOpen]);
+
 	return (
 		<Dialog
 			fullScreen
@@ -99,6 +103,7 @@ export function FormItem({
 					<Box sx={{ display: 'flex' }}>
 						<Box sx={{ m: 1, position: 'relative' }}>
 							<Fab
+								data-testid="save-button"
 								size="medium"
 								aria-label="save"
 								color="success"
@@ -125,6 +130,7 @@ export function FormItem({
 						{deleteOptions && (
 							<Box sx={{ m: 1, position: 'relative' }}>
 								<Fab
+									data-testid="delete-button"
 									size="medium"
 									aria-label="delete"
 									color="error"

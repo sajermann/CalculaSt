@@ -5,31 +5,42 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { DeleteSimulation } from '.';
+import { Toast } from '../Toast';
 
 function Mock() {
 	return (
 		<BrowserRouter>
+			<Toast />
 			<DeleteSimulation />
 		</BrowserRouter>
 	);
 }
 
 describe('Components/DeleteSimulation', () => {
-	it(`should add new item to the list`, async () => {
-		const spy = vi.fn();
-		const { getAllByText, getByTestId } = render(<Mock />);
+	it(`should simulate delete simulation`, async () => {
+		vi.mock('react-router-dom', async () => {
+			const mod = await vi.importActual<any>('react-router-dom');
+			return {
+				...mod,
+				useParams: () => ({ id: 'Test' }),
+			};
+		});
+		const { getByText } = render(<Mock />);
 
-		const buttonOpen = getAllByText('Delete')[0];
+		const buttonOpen = getByText('DELETE');
 		fireEvent.click(buttonOpen);
 
 		await waitFor(async () => {
-			await expect(getAllByText('DELETE_SIMULATION')[0]).toBeInTheDocument();
+			await expect(getByText('DELETE_SIMULATION')).toBeInTheDocument();
 		});
 
-		// await waitFor(async () => {
-		// 	const result = getAllByText('8544.49.00')[0];
-		// 	fireEvent.click(result);
-		// 	await expect(spy).toBeCalled();
-		// });
+		const confirmButton = getByText('CONFIRM');
+		fireEvent.click(confirmButton);
+		await waitFor(
+			async () => {
+				await expect(getByText('Excluído com sucesso')).toBeInTheDocument();
+			},
+			{ timeout: 5000 },
+		);
 	});
 });
