@@ -79,7 +79,6 @@ export function CreateItem() {
 				isOpen={isOpen}
 				item={itemForAdd}
 				mode="create"
-				ncmDataBase={ncmDataBase}
 				onClose={setIsOpen}
 				onSave={() =>
 					handleSaveItem({

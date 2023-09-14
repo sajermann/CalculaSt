@@ -19,6 +19,7 @@ import {
 	MaterialReactTable,
 } from 'material-react-table';
 import { forwardRef, useEffect, useMemo, useState } from 'react';
+import { useDataBase } from '~/Hooks/UseDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TNcm } from '~/Model/TNcm';
 
@@ -32,26 +33,26 @@ const Transition = forwardRef(
 );
 
 type Props = {
-	ncmDataBase: TNcm[];
 	handleSelectNcm: (data: TNcm) => void;
 };
-export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
+export function SelectionProducts({ handleSelectNcm }: Props) {
+	const { ncmDataBase } = useDataBase();
 	const [isFirstUseEffect, setIsFirstUseEffect] = useState(true);
-	const [products] = useState<TNcm[]>(ncmDataBase);
 	const [open, setOpen] = useState(false);
 	const [rowSelection, setRowSelection] = useState<MRT_RowSelectionState>({});
 	const { localizationMTR } = useTranslation();
-
+	console.log('mexeu ehin', { ncmDataBase });
 	useEffect(() => {
 		if (isFirstUseEffect) {
 			setIsFirstUseEffect(false);
 			return;
 		}
+
 		const indexItem = Object.getOwnPropertyNames(rowSelection)[0];
 		handleSelectNcm(
 			!indexItem
 				? { code: '', description: '', id: '' }
-				: products[Number(indexItem)],
+				: ncmDataBase[Number(indexItem)],
 		);
 		setOpen(false);
 	}, [rowSelection]);
@@ -108,7 +109,7 @@ export function SelectionProducts({ handleSelectNcm, ncmDataBase }: Props) {
 					<div>
 						<MaterialReactTable
 							columns={columns}
-							data={products}
+							data={ncmDataBase}
 							enableMultiRowSelection={false}
 							enableRowSelection
 							muiTableBodyRowProps={({ row }) => ({

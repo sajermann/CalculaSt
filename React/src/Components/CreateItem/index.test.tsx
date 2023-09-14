@@ -5,7 +5,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
+import ncmDb from '~/Assets/Data/ncms.json';
 import * as useCalculaSt from '~/Hooks/UseCalculaSt';
+import * as useDataBase from '~/Hooks/UseDataBase';
+import { TUseDataBase } from '~/Model/TUseDatabase';
+import * as handleCreateItem from '~/Utils/HandleCreateItem';
 import * as handleSaveItem from '~/Utils/HandleSaveItem';
 import { CreateItem } from '.';
 
@@ -91,7 +95,15 @@ describe('Components/CreateItem', () => {
 			setCalculaSt: spy,
 		}));
 
+		vi.spyOn(useDataBase, 'useDataBase').mockImplementation(
+			() =>
+				({
+					ncmDataBase: [...ncmDb],
+				}) as unknown as TUseDataBase,
+		);
+
 		const spyHandleSaveItem = vi.spyOn(handleSaveItem, 'handleSaveItem');
+		const spyHandleCreateItem = vi.spyOn(handleCreateItem, 'handleCreateItem');
 
 		const { getAllByText, getByTestId, getByLabelText } = render(
 			<QueryClientProvider
@@ -123,21 +135,30 @@ describe('Components/CreateItem', () => {
 		await waitFor(async () => {
 			await expect(getAllByText('CREATE_ITEM')[0]).toBeInTheDocument();
 		});
-
+		const buttonSave = getByTestId('save-button');
+		expect(buttonSave).toBeDisabled();
 		const inputQuantidade = getByLabelText(/Quantidade/i);
 		await userEvent.type(inputQuantidade, '90');
 		const inputPreco = getByLabelText(/Preço/i);
 		await userEvent.type(inputPreco, '90');
-		// Criar func pra selecionar ncm la da tabela
-		const buttonSave = getByTestId('save-button');
+		const buttonOpenSearch = getByTestId('open-dialog-search-ncm');
+		fireEvent.click(buttonOpenSearch);
+
+		await waitFor(async () => {
+			await expect(getAllByText('8544.49.00')[0]).toBeInTheDocument();
+		});
+
+		const result = getAllByText('8544.49.00')[0];
+		fireEvent.click(result);
+
+		expect(buttonSave).not.toBeDisabled();
 		fireEvent.click(buttonSave);
 		await waitFor(
 			async () => {
 				await expect(spyHandleSaveItem).toBeCalled();
+				await expect(spyHandleCreateItem).toBeCalled();
 			},
-			{
-				timeout: 4000,
-			},
+			{ timeout: 4000 },
 		);
 	});
 });

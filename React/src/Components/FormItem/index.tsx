@@ -39,7 +39,6 @@ const Transition = forwardRef(
 type Props = {
 	mode: 'create' | 'update';
 	isOpen: boolean;
-	ncmDataBase: TNcm[];
 	onClose: (data: boolean) => void;
 	onSave: () => void;
 
@@ -59,7 +58,6 @@ type Props = {
 export function FormItem({
 	mode,
 	isOpen,
-	ncmDataBase,
 	onClose,
 	onSave,
 	isLoading,
@@ -179,10 +177,7 @@ export function FormItem({
 									autoComplete: 'off',
 									autoFocus: true,
 									endAdornment: (
-										<SelectionProducts
-											handleSelectNcm={handleSelectNcm}
-											ncmDataBase={ncmDataBase}
-										/>
+										<SelectionProducts handleSelectNcm={handleSelectNcm} />
 									),
 								}}
 							/>
