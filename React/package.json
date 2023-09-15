@@ -27,6 +27,7 @@
     "react-i18next": "^13.1.2",
     "react-router-dom": "^6.15.0",
     "recharts": "^2.8.0",
+    "unplugin-auto-import": "^0.16.6",
     "zukeeper": "^1.0.2",
     "zustand": "^4.4.1"
   },

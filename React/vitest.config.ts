@@ -2,10 +2,17 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import react from '@vitejs/plugin-react';
 import * as path from 'path';
+import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react(),
+		AutoImport({
+			imports: ['vitest'],
+			dts: true, // generate TypeScript declaration
+		}),
+	],
 	resolve: {
 		alias: {
 			'~': path.resolve(__dirname, 'src'),

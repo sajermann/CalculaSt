@@ -41,7 +41,6 @@ export function SelectionProducts({ handleSelectNcm }: Props) {
 	const [open, setOpen] = useState(false);
 	const [rowSelection, setRowSelection] = useState<MRT_RowSelectionState>({});
 	const { localizationMTR } = useTranslation();
-	console.log('mexeu ehin', { ncmDataBase });
 	useEffect(() => {
 		if (isFirstUseEffect) {
 			setIsFirstUseEffect(false);

@@ -21,6 +21,5 @@ export function mustDisabled({ calculaSt, dataForVerify }: Props): boolean {
 			calculaSt.destinoMercadoria?.name === 'Consumo' ||
 			calculaSt.estadoDestino?.initials === 'SP',
 	};
-
 	return CONFIG[dataForVerify]();
 }

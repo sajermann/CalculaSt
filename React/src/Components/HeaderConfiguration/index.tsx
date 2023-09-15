@@ -4,13 +4,7 @@ import { SelectBrazilState } from '~/Components/SelectBrazilState';
 import { SelectDestinationProduct } from '~/Components/SelectDestinationProduct';
 import { SelectTrueOrFalse } from '~/Components/SelectTrueOrFalse';
 import { SelectTypeCalc } from '~/Components/SelectTypeCalc';
-import { useBrazilStatesDataBase } from '~/Hooks/UseBrazilStatesDataBase';
 import { useCalculaSt } from '~/Hooks/UseCalculaSt';
-import { useFecpDataBase } from '~/Hooks/UseFecpDataBase';
-import { useIcmsDataBase } from '~/Hooks/UseIcmsDataBase';
-import { useIpiDataBase } from '~/Hooks/UseIpiDataBase';
-import { useMvaDataBase } from '~/Hooks/UseMvaDataBase';
-import { useObsDataBase } from '~/Hooks/UseObsDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { handleBrazilState } from '~/Utils/HandleBrazilState';
 import { handleClienteContribuinte } from '~/Utils/HandleClienteContribuinte';
@@ -18,17 +12,21 @@ import { handleDestinationProduct } from '~/Utils/HandleDestinationProduct';
 import { handleSimplesNacional } from '~/Utils/HandleSimplesNacional';
 import { handleTypeCalc } from '~/Utils/HandleTypeCalc';
 import { mustDisabled } from '~/Utils/MustDisabled';
+import { useDataBase } from '~/Hooks/UseDataBase';
 import { DeleteSimulation } from '../DeleteSimulation';
 import { SaveSimulation } from '../SaveSimulation';
 
 export function HeaderConfiguration() {
 	const { calculaSt, setCalculaSt } = useCalculaSt();
-	const { brazilStatesDataBase } = useBrazilStatesDataBase();
-	const { fecpDataBase } = useFecpDataBase();
-	const { icmsDataBase } = useIcmsDataBase();
-	const { ipiDataBase } = useIpiDataBase();
-	const { mvaDataBase } = useMvaDataBase();
-	const { obsDataBase } = useObsDataBase();
+	const {
+		brazilStatesDataBase,
+		fecpDataBase,
+		icmsDataBase,
+		ipiDataBase,
+		mvaDataBase,
+		obsDataBase,
+	} = useDataBase();
+
 	const { translate } = useTranslation();
 
 	return (
