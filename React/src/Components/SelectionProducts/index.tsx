@@ -18,7 +18,7 @@ import {
 	MRT_RowSelectionState,
 	MaterialReactTable,
 } from 'material-react-table';
-import { forwardRef, useEffect, useMemo, useState } from 'react';
+import { ReactElement, forwardRef, useEffect, useMemo, useState } from 'react';
 import { useDataBase } from '~/Hooks/UseDataBase';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TNcm } from '~/Model/TNcm';
@@ -26,7 +26,7 @@ import { TNcm } from '~/Model/TNcm';
 const Transition = forwardRef(
 	(
 		props: TransitionProps & {
-			children: JSX.Element;
+			children: ReactElement;
 		},
 		ref: React.Ref<unknown>,
 	) => <Slide direction="up" ref={ref} {...props} />,

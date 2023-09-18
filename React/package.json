@@ -28,6 +28,7 @@
     "react-router-dom": "^6.15.0",
     "recharts": "^2.8.0",
     "unplugin-auto-import": "^0.16.6",
+    "uuid": "^9.0.1",
     "zukeeper": "^1.0.2",
     "zustand": "^4.4.1"
   },
@@ -38,6 +39,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/react-router-dom": "^5.3.3",
+    "@types/uuid": "^9.0.4",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@vitejs/plugin-react": "^4.0.4",
     "@vitest/coverage-c8": "^0.33.0",

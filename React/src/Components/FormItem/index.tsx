@@ -20,7 +20,7 @@ import {
 } from '@mui/material';
 import { green } from '@mui/material/colors';
 import { TransitionProps } from '@mui/material/transitions';
-import { ChangeEvent, forwardRef, useEffect } from 'react';
+import { ChangeEvent, ReactElement, forwardRef, useEffect } from 'react';
 import { useTranslation } from '~/Hooks/UseTranslation';
 import { TItem } from '~/Model/TItem';
 import { TNcm } from '~/Model/TNcm';
@@ -30,7 +30,7 @@ import { SelectionProducts } from '../SelectionProducts';
 const Transition = forwardRef(
 	(
 		props: TransitionProps & {
-			children: JSX.Element;
+			children: ReactElement;
 		},
 		ref: React.Ref<unknown>,
 	) => <Slide direction="up" ref={ref} {...props} />,
@@ -83,7 +83,7 @@ export function FormItem({
 			<AppBar position="sticky">
 				<Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
 					<IconButton
-						disabled={isLoading || isLoading || deleteOptions?.isLoading}
+						disabled={isLoading || deleteOptions?.isLoading}
 						edge="start"
 						color="inherit"
 						onClick={() => onClose(false)}
@@ -106,7 +106,7 @@ export function FormItem({
 								aria-label="save"
 								color="success"
 								disabled={
-									!(item.total > 0.01) || isLoading || deleteOptions?.isLoading
+									item.total < 0.01 || isLoading || deleteOptions?.isLoading
 								}
 								onClick={onSave}
 							>
@@ -133,9 +133,7 @@ export function FormItem({
 									aria-label="delete"
 									color="error"
 									disabled={
-										!(item.total > 0.01) ||
-										isLoading ||
-										deleteOptions?.isLoading
+										item.total < 0.01 || isLoading || deleteOptions?.isLoading
 									}
 									onClick={deleteOptions.onDelete}
 								>

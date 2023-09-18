@@ -30,11 +30,11 @@ export function reCalcAll({
 }: Props) {
 	const calculaStForRecalcAllNew = { ...calculaStForRecalcAll };
 	const itemsRecalculed: TItem[] = [];
-	for (let i = 0; i < calculaStForRecalcAll.itens.length; i += 1) {
-		const item = { ...calculaStForRecalcAll.itens[i] };
+	for (const item of calculaStForRecalcAll.itens) {
+		const itemTemp = { ...item };
 		const result = reCalcItem({
 			calculaSt: calculaStForRecalcAll,
-			item,
+			item: itemTemp,
 			icmsDataBase,
 			ipiDataBase,
 			mvaDataBase,
@@ -42,6 +42,7 @@ export function reCalcAll({
 		});
 		itemsRecalculed.push(result);
 	}
+
 	calculaStForRecalcAllNew.itens = [...itemsRecalculed];
 	calculaStForRecalcAllNew.obs = obsCalc({
 		calculaSt: calculaStForRecalcAllNew,

@@ -9,10 +9,9 @@ type Props = {
 };
 
 export function obsCalc({ calculaSt, obsDataBase }: Props): string {
-	console.log({ obsDataBase });
 	let difalTemp = 0;
-	for (let i = 0; i < calculaSt.itens.length; i += 1) {
-		difalTemp = calculaSt.itens[i].difal + difalTemp;
+	for (const item of calculaSt.itens) {
+		difalTemp = item.difal + difalTemp;
 	}
 
 	const difalTempFormat = customFormat({
@@ -23,8 +22,8 @@ export function obsCalc({ calculaSt, obsDataBase }: Props): string {
 	});
 
 	let fecpTemp = 0;
-	for (let j = 0; j < calculaSt.itens.length; j += 1) {
-		fecpTemp = calculaSt.itens[j].fecp + fecpTemp;
+	for (const item of calculaSt.itens) {
+		fecpTemp = item.fecp + fecpTemp;
 	}
 
 	const fecpTempFormat = customFormat({

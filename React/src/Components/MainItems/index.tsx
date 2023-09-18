@@ -26,7 +26,7 @@ export function MainItems({ isLoading }: Props) {
 				header: 'Descrição',
 				Cell: ({ row }: TCell<TItem>) => (
 					<div className="max-w-sm truncate">
-						{row.original.ncm.description as string}
+						{row.original.ncm.description}
 					</div>
 				),
 			},

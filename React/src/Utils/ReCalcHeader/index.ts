@@ -15,17 +15,18 @@ export function reCalcHeader({ calculaStForRecalc, setCalculaSt }: Props) {
 	let cofins = 0;
 	let ipi = 0;
 	let valorTotal = 0;
-	for (let i = 0; i < calculaStForRecalc.itens.length; i += 1) {
-		baseCalculo += calculaStForRecalc.itens[i].baseCalculo;
-		icmsHere += calculaStForRecalc.itens[i].icms;
-		baseIcmsSt += calculaStForRecalc.itens[i].baseIcmsSt;
-		st += calculaStForRecalc.itens[i].st;
-		total += calculaStForRecalc.itens[i].total;
-		pis += calculaStForRecalc.itens[i].pis;
-		cofins += calculaStForRecalc.itens[i].cofins;
-		ipi += calculaStForRecalc.itens[i].ipi;
-		valorTotal += calculaStForRecalc.itens[i].valorTotal;
+	for (const item of calculaStForRecalc.itens) {
+		baseCalculo += item.baseCalculo;
+		icmsHere += item.icms;
+		baseIcmsSt += item.baseIcmsSt;
+		st += item.st;
+		total += item.total;
+		pis += item.pis;
+		cofins += item.cofins;
+		ipi += item.ipi;
+		valorTotal += item.valorTotal;
 	}
+
 	newCalculoSt.baseDeCalculo = baseCalculo;
 	newCalculoSt.icms = icmsHere;
 	newCalculoSt.baseIcmsSt = baseIcmsSt;
