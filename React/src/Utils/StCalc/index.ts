@@ -6,7 +6,6 @@ type Props = {
 	calculaSt: TCalculaSt;
 	icms: number;
 	baseIcmsSt: number;
-	baseCalculo: number;
 	ipi: number;
 	total: number;
 	icmsDataBase: TIcms[];
@@ -16,7 +15,6 @@ export function stCalc({
 	calculaSt,
 	icms,
 	baseIcmsSt,
-	baseCalculo,
 	ipi,
 	total,
 	icmsDataBase,
@@ -25,7 +23,6 @@ export function stCalc({
 		if (
 			icms === undefined ||
 			baseIcmsSt === undefined ||
-			baseCalculo === undefined ||
 			ipi === undefined ||
 			total === undefined
 		) {
@@ -35,8 +32,8 @@ export function stCalc({
 			el => el.state.initials === calculaSt.estadoDestino?.initials,
 		);
 		if (!aliquotasLocalizado) return 0;
-		const porcentagemIntraLocalizado = aliquotasLocalizado.percentIntra;
-		const porcentagemIcmsLocalizado = aliquotasLocalizado.percent;
+		const porcentagemIntraLocalizado = aliquotasLocalizado?.percentIntra;
+		const porcentagemIcmsLocalizado = aliquotasLocalizado?.percent;
 		if (
 			calculaSt.destinoMercadoria?.name === 'Revenda' &&
 			!calculaSt.simplesNacional

@@ -1,61 +1,67 @@
-# ViteBoilerplate
+# CalculaStReact
 
-[![Quality Gate Status](https://sonar.sajermann.com/api/project_badges/measure?project=ViteBoilerplate&metric=alert_status&token=c20b031754297367f9ae878250ca398015d0b245)]()
-[![Coverage](https://sonar.sajermann.com/api/project_badges/measure?project=ViteBoilerplate&metric=coverage&token=c20b031754297367f9ae878250ca398015d0b245)]()
-[![Bugs](https://sonar.sajermann.com/api/project_badges/measure?project=ViteBoilerplate&metric=bugs&token=c20b031754297367f9ae878250ca398015d0b245)]()
-[![Code Smells](https://sonar.sajermann.com/api/project_badges/measure?project=ViteBoilerplate&metric=code_smells&token=c20b031754297367f9ae878250ca398015d0b245)]()
-[![Duplicated Lines (%)](https://sonar.sajermann.com/api/project_badges/measure?project=ViteBoilerplate&metric=duplicated_lines_density&token=c20b031754297367f9ae878250ca398015d0b245)]()
+[![Quality Gate Status](https://sonar.sajermann.com/api/project_badges/measure?project=CalculaStReact&metric=alert_status&token=490d78cd98b929c242494fac23f32788411fd2b9)]()
+[![Coverage](https://sonar.sajermann.com/api/project_badges/measure?project=CalculaStReact&metric=coverage&token=490d78cd98b929c242494fac23f32788411fd2b9)]()
+[![Bugs](https://sonar.sajermann.com/api/project_badges/measure?project=CalculaStReact&metric=bugs&token=490d78cd98b929c242494fac23f32788411fd2b9)]()
+[![Code Smells](https://sonar.sajermann.com/api/project_badges/measure?project=CalculaStReact&metric=code_smells&token=490d78cd98b929c242494fac23f32788411fd2b9)]()
+[![Duplicated Lines (%)](https://sonar.sajermann.com/api/project_badges/measure?project=CalculaStReact&metric=duplicated_lines_density&token=490d78cd98b929c242494fac23f32788411fd2b9)]()
 
-Esse Boilerplate tem como finalidade entregar os principais recursos necessários para se iniciar um projeto frontend com React e Typescript.
+Projeto de Calcular a Substituição Tributária da mercadoria baseada na Origem/Destino, Ncm, etc
 
-Sabemos que cada caso é um caso, cada projeto demanda uma necessidade diferente, será necessário adicionar outras libs, ou até mesmo remover alguma que não está sendo utilizada, mas em um mundo perfeito, tentando abrangir a maior parte dos projetos, esse boilerplate que eu criei é a minha escolha.
+Esse projeto foi criado e aperfeiçoado ao longo dos anos que trabalhei como faturista, começou como uma planilha em excel e se transformou em um sistema robusto de cálculo trazendo as principais informações tributárias tentando ao máximo simular uma Danfe.
 
-## Principais Recursos e Configurações Desse Boilerplate
+Fiz esse refactor pelo carinho que tenho com esse meu projeto, então apliquei as melhores práticas do Frontend que tenho conhecimento, algumas funções/jeito de cálculos eu poderia ter feito diferente, porém como faz tempo que não estou na área e não tenho ninguém para validar os cálculos, eu preferi deixar do jeito que está.
 
-### Vite
-Vite hoje é sem dúvidas a melhor escolha para se iniciar um projeto frontent, além de moderno, sua principal característica é a velocidade de compilação, o que leva ao desenvolvedor uma produtividade incrível, Vite utiliza por de baixo dos panos o Rollup, que na minha opinião possui uma configuração muito simples.
+Tendo em mente o que foi anteriormente citado, leve em conta que os valores finais estarão desatualizados.
 
-### Typescript
-Projetos profissionais utilizam o Typescript para desenvolvimento, com ele o desenvolvedor tem mais segurança para desenvolver localizando mais rapidamente os bugs e dando mais manutenibilidade ao projeto.
+## Estrutura
 
-### Tailwind CSS
-Tailwind CSS é um framework CSS que me lembra muito o Bootstrap, porém melhorado, depois de instalado e configurado basta adicionar as classes necessárias para ver o resultado em tela, por exemplo utilizando a classe `flex`, o tailwind já converte para `display: flex;`, esse é só um exemplo das facilidades que o tailwind entrega. Vale lembrar que o Tailwind não entrega componentes prontos como por exemplo o MUI, a criação do componente em si continua a cargo do desenvolvedor.
+ - Vite
+ - Vitest
+ - React
+ - Typescript
+ - Sonar
+ - Material UI
+ - Tailwind
+ - Zustand
+ - ReactQuery
 
-### React Router Dom
-React Router Dom é uma lib que gerencia o roteamento da aplicação e que dificilmente fica de fora de qualquer projeto que tenha mais de uma rota.
+## Recursos
 
-### EsLint
-EsLint tem como objetivo padronizar o código entre diversos desenvolvedores no mesmo projeto. Vale lembrar que para o EsLint funcionar corretamente nesse projeto, são necessários algumas configurações no Vs Code do desenvolvedor.
+### Criação de Simulação
+O usuário pode criar, editar, atualizar e excluir quantas simulações ele desejar.
 
-### Prettier
-Prettier formata e corrige seu código de acordo com as regras do EsLint, por isso ambos utilizados em conjunto são uma verdadeira mão na roda para qualquer desenvolvedor. Assim como o EsLint, para o Prettier funcionar corretamente são necessários algumas configurações no Vs Code do desenvolvedor.
+### Itens da Simulação
+O usuário pode criar, editar, atualizar e excluir quantos itens ele desejar.
 
-### Vitest
-Vitest é uma alternativa ao Jest, além de ter sido criado pela equipe do Vite, ele promete ser mais rápido que seus concorrentes, nesse boilerplate já deixei ele todo configurado para além de testar também gerar os coverages, para executar os testes bastar executar o comando `npm run vitest`.
+### Dashboard
+O usuário tem acesso ao dashboard contendo informações de todas as simulações salvas.
 
-### Sonarqube
-Sonarqube é uma ferramenta de inspeção de qualidade de código, nesse projeto já está configurado para ser executado através do comando `npm run sonar` e colher as informações corretas, o desenvolvedor deve apenas fazer as alterações necessárias de acordo com o seu próprio Sonarqube.
+### Temas
+O usuário pode escolher entre o tema claro ou o tema escuro.
 
-### Dark Mode
-Utilizando o recurso Dark Mode do Tailwind, já deixei configurado um hook para alteração do modo escuro na aplicação, para fazer a alteração nas classes o desenvolvedor deve utilizar o seletor `dark:`.
+### Linguagem
+O usuário pode escolher entre a língua portuguesa ou a língua inglesa. Vale notar que nem tudo está traduzido, como de costume em meus projetos novos eu vou adicionando a multi linguagem, mas com o progresso do CalculaSt percebi que muitos termos brasileiros eu não conseguiria traduzir e acabei deixando desse jeito.
 
-### i18n
-Internacionalização é fundamental em projetos de multiplas linguagens, utilizando a lib i18n eu já deixei configurado um hook para alteração da linguagem da aplicação, deixei como exemplo 2 linguagens completas sendo o `pt-BR` e o `en` e mais uma linguagem com apenas uma tradução que é a `de`.
-
+Obs: Como eu fiz essa versão apenas para demonstração, ele não possui backend, sendo assim todos os dados estão mocados, e todos os dados salvos estarão no local storage.
 
 ## Demonstração
 
-**Aplicação com linguagem EN**
-![Aplicação com linguagem EN](https://lh3.googleusercontent.com/pw/AL9nZEXEJZkHBSTkbkTwkK7uqVyQLmJo_4tE7iDEjUppV1tZ9Wh_BzwkFkJWPkFFFrgTPDQvyTIa2bRUcm-qed1AVOA3OBqwm2Be5DjEUd0xYqwGfXfbTGZdY1eQrdNpUjOrSPnep0jNKl7k8aht05-kScsS=w687-h607-no?authuser=0)
+**Dashboard**
+![Dashboard](https://lh3.googleusercontent.com/pw/AIL4fc_7xx7QvANSe6GVtsbJNFaLeyupnQv5YhJ-tTSoX1DymlXnf2yuQJTNDbSxkWF0eiGyc1OT0TtoH6XqPywBVgEU3I8jnYxS0p7HZKXWnK_qH4eLcLv_9ICyIu6aIB4iqIPBL_KqsKAqxnYST9qLV6iD=w1854-h916-s-no?authuser=0)
 
-**Aplicação com linguagem PT-BR**
-![Aplicação com linguagem PT-BR](https://lh3.googleusercontent.com/pw/AL9nZEVelwcjNe40-MUB5ETLvbzCQ8UVFvkSAQYFLl43TnRySfy7VuAXoDMdIoNxpAzAt0gr8LU64tH9BZ0dM5N3yiluWW30mgnOFj-vQ7NlLL79b4HJRAj329sfzgBJV_B2DHUHKeV-x04qChwNU5r-0qy9=w686-h599-no?authuser=0)
+**Simulações Escuro**
+![Simulações Escuro](https://lh3.googleusercontent.com/pw/AIL4fc9ziW6L2I9NTkDdiNodhEMG1klSJPUD8NHI4iOP4ZLAJSxy2YLGj0KViqGLhGVsCToTon1MOilvG9i91Dwvy3aLXx9zI9GmDfwJoqUuJCT_ChZ2dsM0sCduH6QE3YMCP3Yhd8NIzwxZK0M6Lv5ZkyXi=w1868-h909-s-no?authuser=0)
 
-**Aplicação com Tema Claro**
-![Aplicação com Tema Claro](https://lh3.googleusercontent.com/pw/AL9nZEXAyrbBZFN2OLjhWh1EowBTukKZDhhRrs6GOs7JvITj7BRHBn7RO7fTKLvQo96snXDbD40XOPRMMgxEJeIRzIr5qjPJiu7bfcJyLlN0TX9n3hn5Ys2H8CIMW_rZ7PG_xjXnLo8nKAFG15A_4cCSrDIJ=w693-h619-no?authuser=0)
+**Simulações Claro**
+![Simulações Claro](https://lh3.googleusercontent.com/pw/AIL4fc8h7X48djX8ieiZJjO8RXVj_8uXNjDBM_iC4I3-4Lp_mE1sgNqJ26Jf4onzTel_YzYYYtckWuIKS6nImIDCVSAF76BwFnE3fEPCTQuS_oCRfUctpHtjyo7keRREfLa9nn0cVcbxoib1JpbUMpfGimMP=w1860-h919-s-no?authuser=0)
 
-**Vitest Coverage**
-![Vitest Coverage](https://lh3.googleusercontent.com/pw/AL9nZEUDS6zefrh0HC5Fhrg_mGfSiLYwmg_7YbplfzBcjPnnbRBVCb5lEtUqR-IqoDj6XMT9qO-BXSTlcWyfc8XKDM-jZKf9JcOHEOvXf6JoHWfsORU6-uHbmN5xHWa59BKCJJYJrUdKsfuT5h67zIDgd6ST=w802-h685-no?authuser=0)
+**Criar Item**
+![Criar Item](https://lh3.googleusercontent.com/pw/AIL4fc8ratgCuFJK95gk1Sg5FbjGfsNpr28PSGF7rnrgNHGaNDYFy1qPWMe5jfnyizywdI3fxIHZSsaNXnDlNTPlsHqeM8L5UsHojkAd3uJ8mtVKSZoSIUibr-xdDiWq6rxbXwkm4K6UcZyrULqE26C8graW=w1865-h928-s-no?authuser=0)
 
-**Sonarqube**
-![Sonarqube](https://lh3.googleusercontent.com/pw/AL9nZEXrP0eon6XwURjNEnxpN0GJuk1RknnjUbCKLaHwaCsaj2rapnWuqQ0wRhWCMmQ1NZlyFqsUrcXj85ZWdJQ_4-Oc2uT_OTPMy-mI0fhlui-_zsdzPh7JEjaQoeHgBeGxmEbHFKyU08hBWIH4xO8gB0Kn=w1291-h931-no?authuser=0)
+**Atualizar Item**
+![Atualizar Item](https://lh3.googleusercontent.com/pw/AIL4fc-FtTAcReT4IONevTLDpB9HVQOWgiNYWWKKa6EZ74ZsdByBOCNkpaFjhjoj90_CbsFRaUKV7WDvm968fGonyO1rW5YcJLlOA-zikcOK9l3opA01GVKbPLFL6the0U57Ju70QrDQkJY3x07c_v65Y8Xd=w1869-h929-s-no?authuser=0)
+
+**Atualizar Simulação**
+![Atualizar Simulação](https://lh3.googleusercontent.com/pw/AIL4fc_ST-kbgFiHL4mv28OCK_-vELBfYRxPSmJ324LhpVY9lil8Re2zyTL9KK7SxpSS2L7L5dz0wochScJ89n7-xnXjk06CGXbKeQQZU2JHBQd9TdhGW6Ypyx03Xe41Y8Hr4WaiK8pn5ECohSQHzInPY5IQ=w1860-h925-s-no?authuser=0)
+
