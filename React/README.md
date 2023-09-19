@@ -65,3 +65,6 @@ Obs: Como eu fiz essa versão apenas para demonstração, ele não possui backen
 **Atualizar Simulação**
 ![Atualizar Simulação](https://lh3.googleusercontent.com/pw/AIL4fc_ST-kbgFiHL4mv28OCK_-vELBfYRxPSmJ324LhpVY9lil8Re2zyTL9KK7SxpSS2L7L5dz0wochScJ89n7-xnXjk06CGXbKeQQZU2JHBQd9TdhGW6Ypyx03Xe41Y8Hr4WaiK8pn5ECohSQHzInPY5IQ=w1860-h925-s-no?authuser=0)
 
+**Sonarqube**
+![Quality Gate do Sonarqube](https://lh3.googleusercontent.com/pw/AIL4fc__-SPKLKCW7rLwtzcEh7NUlrXwtMYY3UCkgnW-cx7SS4BaH8oaRL-9JyqeoFJHeRol6AAdzLf_BbCLCHQVNoRW_oiwPpOFXtYHCp9ej71bt_H4HMFrSYThjb31IjswljlZIfK6O57XZ4uqUs8SDC0I=w1834-h918-s-no?authuser=0)
+
